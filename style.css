@@ -379,9 +379,10 @@ section{
 }
 
 .bar {
-   width: 500px;
+   width: 100%;
+   max-width: 500px; /* mantiene el ancho en pantallas grandes */
    height: 60px;
-   background: linear-gradient(to right, #ffc400dc, #ffcc00); /* Paleta base */
+   background: linear-gradient(to right, #ffc400dc, #ffcc00);
    border-radius: 8px;
    display: flex;
    justify-content: space-between;
@@ -394,7 +395,10 @@ section{
    transition: all 0.3s ease;
    position: relative;
    cursor: pointer;
+   flex-direction: column; /* añade esto si el contenido no cabe en una línea */
+   text-align: center;
 }
+
 
 .bar span.subtext {
    font-size: 12px;

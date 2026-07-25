@@ -2,325 +2,310 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Juan Antonio | Portfolio Moderno</title>
-
-    <!-- Nueva Tipografía: Outfit (Muy moderna y limpia) -->
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Juan Antonio | Portfolio 2026</title>
     
-    <!-- Font Awesome -->
+    <!-- Fuentes Ultra Modernas 2026: Plus Jakarta Sans -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Iconos limpios -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-    <!-- AOS CSS (Animaciones) -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
-
-    <!-- Custom CSS -->
+    
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- Menú Superior Flotante (Glassmorphism) -->
-<header class="navbar-glass">
-    <a href="#home" class="logo">Juan<span>Antonio</span>.</a>
-    
-    <nav class="nav-links">
-        <a href="#home">Inicio</a>
-        <a href="#about">Perfil</a>
-        <a href="#resume">Trayectoria</a>
-        <a href="#portfolio">Proyectos</a>
-        <a href="#contact">Contacto</a>
+    <!-- Fondo desenfocado dinámico -->
+    <div class="bg-glow"></div>
+    <div class="bg-glow bg-glow-2"></div>
+
+    <!-- Overlay oscuro para cuando un bloque se expande -->
+    <div class="overlay" id="overlay"></div>
+
+    <!-- Contenedor Principal estilo Bento Box -->
+    <main class="bento-grid">
+
+        <!-- 1. BLOQUE HERO (FOTO + TÍTULO) - No expandible -->
+        <article class="bento-card hero-card" id="home">
+            <div class="hero-layout">
+                <div class="blob-avatar">
+                    <img src="fotomia.jpg" alt="Juan Antonio" onerror="this.src='https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80'">
+                </div>
+                <div class="hero-text">
+                    <span class="status-badge"><span class="dot"></span> Disponible para proyectos</span>
+                    <h1>Juan Antonio</h1>
+                    <p class="subtitle">Data & Digital Marketing</p>
+                </div>
+            </div>
+        </article>
+
+        <!-- 2. BLOQUE BIO (Expandible) -->
+        <article class="bento-card expandable gradient-border bio-card">
+            <button class="close-btn"><i class="fas fa-times"></i></button>
+            <div class="collapsed-content">
+                <h2>Sobre mí</h2>
+                <p>Estratega digital y desarrollador orientado a datos. <span>Toca para leer más...</span></p>
+            </div>
+            <div class="expanded-content">
+                <h2 class="expanded-title">Mi Biografía</h2>
+                <p class="big-text">La programación y el diseño web son dos caras de la misma moneda. Combino el análisis de datos, Python y estrategias de marketing para crear experiencias que impactan y convierten.</p>
+                <div class="contact-pills">
+                    <span><i class="fas fa-at"></i> juanantonio.sanchezm@um.es</span>
+                    <span><i class="fas fa-map-pin"></i> Murcia, España</span>
+                    <span><i class="fas fa-phone"></i> +34 633 698 035</span>
+                </div>
+                <a href="https://drive.google.com/file/d/14nNCoLJqllwpwbAbLhM00xUMhK6Wyele/view" target="_blank" class="download-cv">Descargar CV PDF</a>
+            </div>
+        </article>
+
+        <!-- 3. BLOQUE EDUCACIÓN (Expandible) -->
+        <article class="bento-card expandable edu-card" id="education">
+            <button class="close-btn"><i class="fas fa-times"></i></button>
+            <div class="collapsed-content">
+                <div class="card-header">
+                    <h2>Educación</h2>
+                    <div class="icon-indicator"><i class="fas fa-expand-alt"></i></div>
+                </div>
+                <h3 class="highlight-title">Máster en Marketing Digital</h3>
+                <p>Universidad de Murcia</p>
+            </div>
+            
+            <div class="expanded-content">
+                <h2 class="expanded-title">Formación Académica</h2>
+                
+                <div class="edu-modern-list">
+                    <!-- Máster Destacado -->
+                    <div class="edu-item master-item">
+                        <div class="edu-year">2025 - 2026</div>
+                        <h3>Máster en Marketing Digital y Analítico</h3>
+                        <h4>Universidad de Murcia</h4>
+                        <p>Formación hiper-especializada en estrategias de marketing digital, análisis profundo de datos, SEO, SEM, visualización de métricas y optimización de conversiones para liderar proyectos digitales escalables.</p>
+                    </div>
+
+                    <div class="edu-item">
+                        <div class="edu-year">2021 - 2025</div>
+                        <h3>Grado en Gestión de Información y Contenidos Digitales</h3>
+                        <h4>Universidad de Murcia</h4>
+                        <p>Diseño y gestión de sistemas de información, desarrollo de productos digitales, comunicación en redes y tratamiento masivo de datos (Big Data Básico).</p>
+                    </div>
+
+                    <div class="edu-item">
+                        <div class="edu-year">2024 - 2025</div>
+                        <h3>Especialización Python & Django</h3>
+                        <h4>Amd Formación - Udemy</h4>
+                        <p>190 horas de programación intensiva: fundamentos, estructuras de datos, creación de APIs y despliegue de aplicaciones web completas.</p>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <!-- 4. BLOQUE EXPERIENCIA (Expandible - Diseño Diferente) -->
+        <article class="bento-card expandable exp-card" id="experience">
+            <button class="close-btn"><i class="fas fa-times"></i></button>
+            <div class="collapsed-content">
+                <div class="card-header">
+                    <h2>Experiencia</h2>
+                    <div class="icon-indicator"><i class="fas fa-expand-alt"></i></div>
+                </div>
+                <div class="exp-preview">
+                    <span>CTCON</span> • <span>Novarum</span> • <span>AMC</span>
+                </div>
+            </div>
+
+            <div class="expanded-content">
+                <h2 class="expanded-title">Trayectoria Profesional</h2>
+                
+                <!-- Layout tipo Grid de Impacto para Experiencia -->
+                <div class="exp-impact-grid">
+                    <div class="impact-card">
+                        <span class="exp-date">2025 - Actualidad</span>
+                        <h3>Back-End & Comm. Manager</h3>
+                        <div class="company-tag">CTCON</div>
+                        <p>Gestión de web institucional, creación de contenidos digitales, vigilancia tecnológica para innovación y posicionamiento SEO avanzado. Análisis de métricas para toma de decisiones.</p>
+                    </div>
+
+                    <div class="impact-card">
+                        <span class="exp-date">2024 - Actualidad</span>
+                        <h3>Front-End Developer</h3>
+                        <div class="company-tag">Curti Oliva & Novarum</div>
+                        <p>Creación, desarrollo y mantenimiento de e-commerce y webs corporativas. Responsable de la UI/UX y la gestión integral de comunidades digitales.</p>
+                    </div>
+
+                    <div class="impact-card">
+                        <span class="exp-date">2014 - 2021</span>
+                        <h3>Responsable de Logística</h3>
+                        <div class="company-tag">AMC</div>
+                        <p>Gestión de inventarios, optimización de bases de datos internas y coordinación integral de la cadena de suministro y trazabilidad de productos.</p>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <!-- 5. BLOQUE SKILLS (Expandible) -->
+        <article class="bento-card expandable skills-card">
+            <button class="close-btn"><i class="fas fa-times"></i></button>
+            <div class="collapsed-content">
+                <h2>Stack Técnico</h2>
+                <div class="skills-mini">
+                    <span class="sk-pill">Python</span>
+                    <span class="sk-pill">SEO</span>
+                    <span class="sk-pill">WP</span>
+                    <span class="sk-pill">+</span>
+                </div>
+            </div>
+            
+            <div class="expanded-content">
+                <h2 class="expanded-title">Habilidades y Tecnologías</h2>
+                <div class="skills-grid-modern">
+                    <div class="skill-group">
+                        <h3>Data & Backend</h3>
+                        <div class="progress-modern"><div class="progress-bar" style="width: 75%;"><span>Python / Pandas / NumPy</span></div></div>
+                        <div class="progress-modern"><div class="progress-bar" style="width: 60%;"><span>MySQL / PHP / Django</span></div></div>
+                    </div>
+                    <div class="skill-group">
+                        <h3>Marketing & Analytics</h3>
+                        <div class="progress-modern"><div class="progress-bar" style="width: 85%;"><span>SEO / Analítica Web</span></div></div>
+                        <div class="progress-modern"><div class="progress-bar" style="width: 80%;"><span>WordPress / CMS</span></div></div>
+                    </div>
+                    <div class="skill-group">
+                        <h3>Front-End</h3>
+                        <div class="progress-modern"><div class="progress-bar" style="width: 70%;"><span>HTML5 / CSS3 / JS</span></div></div>
+                        <div class="progress-modern"><div class="progress-bar" style="width: 65%;"><span>Diseño UI / UX Responsive</span></div></div>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <!-- 6. BLOQUE PROYECTOS (Expandible) -->
+        <article class="bento-card expandable projects-card" id="projects">
+            <button class="close-btn"><i class="fas fa-times"></i></button>
+            <div class="collapsed-content">
+                <h2>Proyectos</h2>
+                <p>Curti Oliva, Titanic, Novarum...</p>
+            </div>
+
+            <div class="expanded-content">
+                <h2 class="expanded-title">Portfolio Destacado</h2>
+                <div class="projects-masonry">
+                    
+                    <a href="https://github.com/Funkillo/Titanic_Proyecto" target="_blank" class="proj-item">
+                        <div class="proj-img"><img src="titanic_preview.png" alt="Titanic" onerror="this.src='https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=500&q=80'"></div>
+                        <div class="proj-info">
+                            <h4>Titanic Data Analysis</h4>
+                            <span>Python, Pandas</span>
+                        </div>
+                    </a>
+
+                    <a href="https://www.curtioliva.es" target="_blank" class="proj-item">
+                        <div class="proj-img"><img src="curtioliva.jpg.png" alt="Curti Oliva" onerror="this.src='https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=500&q=80'"></div>
+                        <div class="proj-info">
+                            <h4>Curti Oliva</h4>
+                            <span>Desarrollo Web & SEO</span>
+                        </div>
+                    </a>
+
+                    <a href="https://ctcon-rm.com/es/" target="_blank" class="proj-item">
+                        <div class="proj-img"><img src="ctcon..png" alt="CTCON" onerror="this.src='https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=500&q=80'"></div>
+                        <div class="proj-info">
+                            <h4>CTCON Web</h4>
+                            <span>Gestión CMS</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </article>
+
+    </main>
+
+    <!-- Barra de Navegación Móvil Inferior (Estilo App) -->
+    <nav class="bottom-nav">
+        <a href="#home" class="nav-item active"><i class="fas fa-user"></i><span>Perfil</span></a>
+        <a href="#education" class="nav-item"><i class="fas fa-book"></i><span>Estudios</span></a>
+        
+        <!-- Botón Especial de Like en el centro de la App Bar -->
+        <button id="likebtn" class="nav-like">
+            <i class="fas fa-heart"></i>
+            <span id="like-count">1436</span>
+        </button>
+        
+        <a href="#experience" class="nav-item"><i class="fas fa-bolt"></i><span>Exp</span></a>
+        <a href="#projects" class="nav-item"><i class="fas fa-layer-group"></i><span>Proyectos</span></a>
     </nav>
 
-    <div class="nav-actions">
-        <!-- Botón Epic Like -->
-        <button id="likebtn" class="btn-like">
-            <i class="fas fa-heart"></i> <span id="like-count">1435</span>
-        </button>
-        <div id="menu-toggle" class="fas fa-bars"></div>
-    </div>
-</header>
+    <!-- JS Scripts -->
+    <script>
+        // Lógica de EXPANSION MODAL TIPO BENTO BOX (2026 Trend)
+        const cards = document.querySelectorAll('.expandable');
+        const overlay = document.getElementById('overlay');
+        let activeCard = null;
 
-<!-- Hero Section (Foto y Presentación) -->
-<section class="hero" id="home">
-    <div class="hero-content" data-aos="fade-right">
-        <span class="badge">Analista & Desarrollador Web</span>
-        <h1>Creando soluciones digitales con <span>Datos y Diseño</span></h1>
-        <p>
-            Creador digital con Máster en Marketing Digital Analítico. Combino programación en Python, desarrollo web y estrategias SEO para construir proyectos funcionales y orientados a resultados.
-        </p>
-        <div class="hero-buttons">
-            <a href="#portfolio" class="btn-primary">Ver Proyectos</a>
-            <div class="social-icons">
-                <a href="https://github.com/Funkillo" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/juan-antonio-s%C3%A1nchez-mar%C3%ADn-024b79257/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="https://twitter.com/FunkilloR" target="_blank"><i class="fab fa-twitter"></i></a>
-            </div>
-        </div>
-    </div>
-    <div class="hero-image" data-aos="fade-left">
-        <!-- Reemplaza con tu foto -->
-        <div class="blob-image">
-            <img src="fotomia.jpg" alt="Juan Antonio">
-        </div>
-    </div>
-</section>
-
-<!-- About & Skills Section -->
-<section class="about" id="about">
-    <div class="section-title" data-aos="fade-up">
-        <h2>Sobre <span>Mí</span></h2>
-        <p>Conoce mi perfil técnico y profesional</p>
-    </div>
-
-    <div class="about-grid">
-        <!-- Bio Card -->
-        <div class="bio-card" data-aos="fade-up">
-            <h3>Mi Biografía</h3>
-            <p>La programación y el marketing digital son dos caras de la misma moneda. Mi objetivo es trabajar en la intersección de ambas para crear experiencias web optimizadas, respaldadas por un análisis de datos profundo.</p>
-            <ul class="info-list">
-                <li><i class="fas fa-envelope"></i> juanantonio.sanchezm@um.es</li>
-                <li><i class="fas fa-map-marker-alt"></i> Murcia, España</li>
-                <li><i class="fas fa-briefcase"></i> +2 Años de Experiencia</li>
-            </ul>
-            <a href="https://drive.google.com/file/d/14nNCoLJqllwpwbAbLhM00xUMhK6Wyele/view?usp=sharing" target="_blank" class="btn-secondary">Descargar CV <i class="fas fa-download"></i></a>
-        </div>
-
-        <!-- Nuevas Skills (Etiquetas) -->
-        <div class="skills-card" data-aos="fade-up" data-aos-delay="100">
-            <h3>Mis Habilidades</h3>
-            
-            <div class="skill-category">
-                <h4><i class="fab fa-python"></i> Data & Python</h4>
-                <div class="tags">
-                    <span>Python</span> <span>Pandas</span> <span>NumPy</span> <span>Matplotlib</span> <span>Machine Learning</span>
-                </div>
-            </div>
-
-            <div class="skill-category">
-                <h4><i class="fas fa-code"></i> Desarrollo Web</h4>
-                <div class="tags">
-                    <span>HTML5</span> <span>CSS3</span> <span>JavaScript</span> <span>PHP</span> <span>WordPress</span> <span>Bases de Datos</span>
-                </div>
-            </div>
-
-            <div class="skill-category">
-                <h4><i class="fas fa-chart-line"></i> Marketing & SEO</h4>
-                <div class="tags">
-                    <span>Analítica Web</span> <span>SEO On-Page</span> <span>Community Management</span> <span>Estrategia Digital</span>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Resume Section (Timeline Vertical) -->
-<section class="resume" id="resume">
-    <div class="section-title" data-aos="fade-up">
-        <h2>Mi <span>Trayectoria</span></h2>
-        <p>Educación y experiencia laboral</p>
-    </div>
-
-    <div class="timeline">
-        <!-- Item 1: Master (Destacado) -->
-        <div class="timeline-item" data-aos="fade-up">
-            <div class="timeline-dot highlight"></div>
-            <div class="timeline-content highlight-content">
-                <span class="date">2025 - 2026</span>
-                <h3>Máster en Marketing Digital y Analítico</h3>
-                <h4>Universidad de Murcia</h4>
-                <p>Formación superior en estrategias de marketing, análisis avanzado de métricas, SEO, SEM y conversión.</p>
-            </div>
-        </div>
-
-        <!-- Item 2: Exp 1 -->
-        <div class="timeline-item" data-aos="fade-up">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-                <span class="date">2024 - Actualidad</span>
-                <h3>Front-End Developer & Community Manager</h3>
-                <h4>novarum.es y curtioliva.es</h4>
-                <p>Desarrollo web, mantenimiento técnico, optimización SEO y gestión estratégica de redes sociales corporativas.</p>
-            </div>
-        </div>
-
-        <!-- Item 3: Grado -->
-        <div class="timeline-item" data-aos="fade-up">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-                <span class="date">2021 - 2025</span>
-                <h3>Grado en Gestión de Información y Contenidos Digitales</h3>
-                <h4>Universidad de Murcia</h4>
-                <p>Diseño y gestión de sistemas de información, desarrollo multimedia y comunicación en entornos digitales.</p>
-            </div>
-        </div>
-
-        <!-- Item 4: Exp 2 -->
-        <div class="timeline-item" data-aos="fade-up">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-                <span class="date">2025 - Actualidad</span>
-                <h3>Back-End Developer & Community Manager</h3>
-                <h4>Centro Tecnológico de la Construcción (CTCON)</h4>
-                <p>Gestión de la web institucional, creación de contenidos, vigilancia tecnológica y estrategias de comunicación digital.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Portfolio Section -->
-<section class="portfolio" id="portfolio">
-    <div class="section-title" data-aos="fade-up">
-        <h2>Mis <span>Proyectos</span></h2>
-        <p>Trabajos recientes en programación y diseño web</p>
-    </div>
-
-    <div class="portfolio-grid">
-        <!-- Proyecto 1 -->
-        <div class="portfolio-card" data-aos="zoom-in">
-            <div class="card-img">
-                <img src="curtioliva.jpg.png" alt="Curti Oliva">
-            </div>
-            <div class="card-info">
-                <span class="category">Desarrollo Web</span>
-                <h3>Web Corporativa Curti Oliva</h3>
-                <a href="https://www.curtioliva.es" target="_blank" class="card-link"><i class="fas fa-arrow-right"></i></a>
-            </div>
-        </div>
-
-        <!-- Proyecto 2 -->
-        <div class="portfolio-card" data-aos="zoom-in" data-aos-delay="100">
-            <div class="card-img">
-                <img src="titanic_preview.png" alt="Titanic Python">
-            </div>
-            <div class="card-info">
-                <span class="category">Data Science / Python</span>
-                <h3>Análisis de Datos: Titanic</h3>
-                <a href="https://github.com/Funkillo/Titanic_Proyecto" target="_blank" class="card-link"><i class="fas fa-arrow-right"></i></a>
-            </div>
-        </div>
-
-        <!-- Proyecto 3 -->
-        <div class="portfolio-card" data-aos="zoom-in" data-aos-delay="200">
-            <div class="card-img">
-                <img src="Novarum.es.png" alt="Novarum">
-            </div>
-            <div class="card-info">
-                <span class="category">HTML / CSS / JS</span>
-                <h3>Desarrollo Web Novarum</h3>
-                <a href="https://www.curtioliva.es" target="_blank" class="card-link"><i class="fas fa-arrow-right"></i></a>
-            </div>
-        </div>
-
-        <!-- Proyecto 4 -->
-        <div class="portfolio-card" data-aos="zoom-in">
-            <div class="card-img">
-                <img src="ctcon..png" alt="CTCON">
-            </div>
-            <div class="card-info">
-                <span class="category">Gestión CMS</span>
-                <h3>Web Institucional CTCON</h3>
-                <a href="https://ctcon-rm.com/es/" target="_blank" class="card-link"><i class="fas fa-arrow-right"></i></a>
-            </div>
-        </div>
-
-        <!-- Proyecto 5 -->
-        <div class="portfolio-card" data-aos="zoom-in" data-aos-delay="100">
-            <div class="card-img">
-                <img src="intro.jpg" alt="Juego Stupikdo">
-            </div>
-            <div class="card-info">
-                <span class="category">Juego Python</span>
-                <h3>Videojuego "Stupikdo"</h3>
-                <a href="https://github.com/Funkillo/Juego_STUPIKDO" target="_blank" class="card-link"><i class="fas fa-arrow-right"></i></a>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Contact Section -->
-<section class="contact" id="contact">
-    <div class="section-title" data-aos="fade-up">
-        <h2>Trabajemos <span>Juntos</span></h2>
-        <p>Contacta conmigo para proyectos o colaboraciones</p>
-    </div>
-
-    <div class="contact-grid">
-        <div class="contact-box" data-aos="fade-up">
-            <i class="fas fa-phone-alt"></i>
-            <h3>Teléfono</h3>
-            <p>+34 633 698 035</p>
-        </div>
-        <div class="contact-box" data-aos="fade-up" data-aos-delay="100">
-            <i class="fas fa-envelope"></i>
-            <h3>Email</h3>
-            <p>juanantonio.sanchezm@um.es</p>
-        </div>
-        <div class="contact-box" data-aos="fade-up" data-aos-delay="200">
-            <i class="fas fa-map-marker-alt"></i>
-            <h3>Ubicación</h3>
-            <p>Murcia, España</p>
-        </div>
-    </div>
-</section>
-
-<footer>
-    <p>&copy; 2025 Juan Antonio Sánchez Marín. Diseñado desde cero.</p>
-</footer>
-
-<!-- JS Scripts -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-<script>
-    // Inicializar AOS
-    AOS.init({
-        duration: 800,
-        once: true
-    });
-
-    // Lógica del Botón de Like
-    const likeBtn = document.getElementById('likebtn');
-    const likeCountSpan = document.getElementById('like-count');
-    let currentLikes = 1435;
-    
-    likeBtn.addEventListener('click', () => {
-        currentLikes++;
-        likeCountSpan.textContent = currentLikes;
-        
-        // Efecto visual al hacer clic
-        likeBtn.style.transform = 'scale(1.1)';
-        setTimeout(() => {
-            likeBtn.style.transform = 'scale(1)';
-        }, 200);
-    });
-
-    // Lógica del Menú Móvil
-    const menuToggle = document.getElementById('menu-toggle');
-    const navLinks = document.querySelector('.nav-links');
-
-    menuToggle.addEventListener('click', () => {
-        navLinks.classList.toggle('active');
-        menuToggle.classList.toggle('fa-times');
-    });
-
-    // Cerrar menú al hacer clic en un enlace
-    document.querySelectorAll('.nav-links a').forEach(link => {
-        link.addEventListener('click', () => {
-            navLinks.classList.remove('active');
-            menuToggle.classList.remove('fa-times');
+        // Función para abrir la tarjeta
+        cards.forEach(card => {
+            card.addEventListener('click', function(e) {
+                // Si ya está expandida o se hace clic en el botón de cerrar, ignorar
+                if (this.classList.contains('expanded') || e.target.closest('.close-btn') || e.target.closest('a')) return;
+                
+                // Cerrar cualquier tarjeta activa previa
+                if (activeCard) {
+                    activeCard.classList.remove('expanded');
+                }
+                
+                // Expandir la actual
+                this.classList.add('expanded');
+                overlay.classList.add('active');
+                activeCard = this;
+                
+                // Bloquear scroll de fondo en móvil
+                document.body.style.overflow = 'hidden';
+            });
         });
-    });
 
-    // Cambiar estilo del header al hacer scroll
-    window.addEventListener('scroll', () => {
-        const header = document.querySelector('.navbar-glass');
-        if(window.scrollY > 50) {
-            header.style.boxShadow = '0 5px 20px rgba(0,0,0,0.05)';
-            header.style.background = 'rgba(255, 255, 255, 0.95)';
-        } else {
-            header.style.boxShadow = 'none';
-            header.style.background = 'rgba(255, 255, 255, 0.8)';
-        }
-    });
-</script>
+        // Función para cerrar la tarjeta (Botón X)
+        document.querySelectorAll('.close-btn').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.stopPropagation(); // Evitar que dispare el click de abrir
+                if (activeCard) activeCard.classList.remove('expanded');
+                overlay.classList.remove('active');
+                document.body.style.overflow = 'auto';
+                activeCard = null;
+            });
+        });
+
+        // Cerrar al tocar el fondo oscuro
+        overlay.addEventListener('click', () => {
+            if (activeCard) activeCard.classList.remove('expanded');
+            overlay.classList.remove('active');
+            document.body.style.overflow = 'auto';
+            activeCard = null;
+        });
+
+        // Sistema Epic Like
+        const likeBtn = document.getElementById('likebtn');
+        const likeCount = document.getElementById('like-count');
+        let likes = 1436;
+
+        likeBtn.addEventListener('click', (e) => {
+            e.stopPropagation(); // Evitar comportamientos raros
+            likes++;
+            likeCount.textContent = likes;
+            
+            // Animación de pulso
+            likeBtn.style.transform = 'scale(1.2) translateY(-15px)';
+            likeBtn.style.background = '#ef4444';
+            likeBtn.style.color = '#fff';
+            
+            setTimeout(() => {
+                likeBtn.style.transform = 'scale(1) translateY(-10px)';
+            }, 200);
+        });
+
+        // Navegación Activa
+        const navItems = document.querySelectorAll('.nav-item');
+        navItems.forEach(item => {
+            item.addEventListener('click', function() {
+                navItems.forEach(nav => nav.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+    </script>
 </body>
 </html>

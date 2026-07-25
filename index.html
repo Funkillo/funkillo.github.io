@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio | Juan Antonio Sánchez Marín</title>
+    <title>Juan Antonio | Portfolio Moderno</title>
 
-    <!-- Google Fonts: Poppins para un toque más moderno -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Nueva Tipografía: Outfit (Muy moderna y limpia) -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -20,326 +20,307 @@
 </head>
 <body>
 
-<!-- Header Section -->
-<header class="header">
-    <div id="menu-btn" class="fas fa-bars"></div>
+<!-- Menú Superior Flotante (Glassmorphism) -->
+<header class="navbar-glass">
+    <a href="#home" class="logo">Juan<span>Antonio</span>.</a>
     
-    <a href="#home" class="logo">Portfolio.</a>
-    
-    <!-- Botón de Like Épico -->
-    <button id="likebtn" class="glow-on-hover">
-        <i class="fas fa-heart"></i> <span id="like-count">1435</span>
-    </button>
-
-    <nav class="navbar">
-        <a href="#home" class="active">Inicio</a>
-        <a href="#about">Acerca de</a>
-        <a href="#services">Servicios</a>
+    <nav class="nav-links">
+        <a href="#home">Inicio</a>
+        <a href="#about">Perfil</a>
+        <a href="#resume">Trayectoria</a>
         <a href="#portfolio">Proyectos</a>
         <a href="#contact">Contacto</a>
     </nav>
 
-    <div class="follow">
-        <a href="https://twitter.com/FunkilloR" class="fab fa-twitter" target="_blank"></a>
-        <a href="https://www.instagram.com/jmarinn92/" class="fab fa-instagram" target="_blank"></a>
-        <a href="https://www.linkedin.com/in/juan-antonio-s%C3%A1nchez-mar%C3%ADn-024b79257/" class="fab fa-linkedin" target="_blank"></a>
-        <a href="https://github.com/Funkillo" class="fab fa-github" target="_blank"></a>
+    <div class="nav-actions">
+        <!-- Botón Epic Like -->
+        <button id="likebtn" class="btn-like">
+            <i class="fas fa-heart"></i> <span id="like-count">1435</span>
+        </button>
+        <div id="menu-toggle" class="fas fa-bars"></div>
     </div>
 </header>
 
-<!-- Home Section -->
-<section class="home" id="home">
-    <div class="image" data-aos="fade-right">
-        <!-- Asegúrate de tener tu foto en la misma carpeta o actualiza la ruta -->
-        <img src="fotomia.jpg" alt="Foto de Juan Antonio">
-    </div>
-    
-    <div class="content">
-        <h3 data-aos="fade-up">JUAN ANTONIO</h3>
-        <span data-aos="fade-up" class="subtitle-badge">Desarrollador Web & Analista Digital</span>
-        
-        <p data-aos="fade-up">
-            Creador digital con formación en Gestión de Información y Contenidos Digitales. 
-            Combino programación, diseño web y <strong>marketing digital analítico</strong> para desarrollar 
-            experiencias digitales épicas, funcionales y orientadas a resultados.
+<!-- Hero Section (Foto y Presentación) -->
+<section class="hero" id="home">
+    <div class="hero-content" data-aos="fade-right">
+        <span class="badge">Analista & Desarrollador Web</span>
+        <h1>Creando soluciones digitales con <span>Datos y Diseño</span></h1>
+        <p>
+            Creador digital con Máster en Marketing Digital Analítico. Combino programación en Python, desarrollo web y estrategias SEO para construir proyectos funcionales y orientados a resultados.
         </p>
-        <a data-aos="fade-up" href="#portfolio" class="btn">Ver mis proyectos <i class="fas fa-arrow-right"></i></a>
+        <div class="hero-buttons">
+            <a href="#portfolio" class="btn-primary">Ver Proyectos</a>
+            <div class="social-icons">
+                <a href="https://github.com/Funkillo" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/juan-antonio-s%C3%A1nchez-mar%C3%ADn-024b79257/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://twitter.com/FunkilloR" target="_blank"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="hero-image" data-aos="fade-left">
+        <!-- Reemplaza con tu foto -->
+        <div class="blob-image">
+            <img src="fotomia.jpg" alt="Juan Antonio">
+        </div>
     </div>
 </section>
 
-<!-- About Section -->
+<!-- About & Skills Section -->
 <section class="about" id="about">
-    <h1 class="heading" data-aos="fade-up"> <span>Biografía</span> </h1>
-
-    <div class="biography">
-        <p data-aos="fade-up">"La programación, el diseño web y el análisis de datos son las herramientas perfectas para crear experiencias digitales que no solo impactan visualmente, sino que convierten."</p>
-
-        <div class="bio">
-            <h3 data-aos="zoom-in"> <span>Nombre : </span> Juan Antonio </h3>
-            <h3 data-aos="zoom-in"> <span>Email : </span> juanantonio.sanchezm@um.es</h3>
-            <h3 data-aos="zoom-in"> <span>Ubicación : </span> Murcia, España</h3>
-            <h3 data-aos="zoom-in"> <span>Edad : </span> 33 años </h3>
-            <h3 data-aos="zoom-in"> <span>Experiencia : </span> +2 años </h3>
-        </div>
-
-        <a href="https://drive.google.com/file/d/14nNCoLJqllwpwbAbLhM00xUMhK6Wyele/view?usp=sharing" target="_blank" class="btn" data-aos="fade-up"><i class="fas fa-download"></i> Descargar CV</a>
+    <div class="section-title" data-aos="fade-up">
+        <h2>Sobre <span>Mí</span></h2>
+        <p>Conoce mi perfil técnico y profesional</p>
     </div>
 
-    <!-- Skills -->
-    <h1 class="heading" style="margin-top: 5rem;"><span>Skills & Tecnologías</span></h1>
-    <div class="progress">
-        <div class="bar" data-aos="fade-up">
-            <h3><span>Python & Data</span> <span>75%</span></h3>
-            <span class="subtext">Pandas, NumPy, Matplotlib, Seaborn, Machine Learning Básico</span>
+    <div class="about-grid">
+        <!-- Bio Card -->
+        <div class="bio-card" data-aos="fade-up">
+            <h3>Mi Biografía</h3>
+            <p>La programación y el marketing digital son dos caras de la misma moneda. Mi objetivo es trabajar en la intersección de ambas para crear experiencias web optimizadas, respaldadas por un análisis de datos profundo.</p>
+            <ul class="info-list">
+                <li><i class="fas fa-envelope"></i> juanantonio.sanchezm@um.es</li>
+                <li><i class="fas fa-map-marker-alt"></i> Murcia, España</li>
+                <li><i class="fas fa-briefcase"></i> +2 Años de Experiencia</li>
+            </ul>
+            <a href="https://drive.google.com/file/d/14nNCoLJqllwpwbAbLhM00xUMhK6Wyele/view?usp=sharing" target="_blank" class="btn-secondary">Descargar CV <i class="fas fa-download"></i></a>
         </div>
-        <div class="bar" data-aos="fade-up" data-aos-delay="100">
-            <h3><span>Desarrollo Web Front-End</span> <span>70%</span></h3>
-            <span class="subtext">HTML5, CSS3, JavaScript, Responsive Design, Animaciones</span>
-        </div>
-        <div class="bar" data-aos="fade-up" data-aos-delay="200">
-            <h3><span>Marketing Digital & SEO</span> <span>80%</span></h3>
-            <span class="subtext">Analítica Web, Estrategias SEO/SEM, Optimización, WordPress</span>
-        </div>
-        <div class="bar" data-aos="fade-up" data-aos-delay="300">
-            <h3><span>Bases de Datos & Backend</span> <span>60%</span></h3>
-            <span class="subtext">MySQL, PHP, SQLite, Django (básico)</span>
-        </div>
-    </div>
 
-    <!-- Education & Experience -->
-    <div class="edu-exp">
-        <h1 class="heading" data-aos="fade-up" style="margin-top: 5rem;"> <span>Trayectoria</span> </h1>
-        <div class="row">
+        <!-- Nuevas Skills (Etiquetas) -->
+        <div class="skills-card" data-aos="fade-up" data-aos-delay="100">
+            <h3>Mis Habilidades</h3>
             
-            <!-- Educación -->
-            <div class="box-container">
-                <h3 class="title" data-aos="fade-right"><i class="fas fa-graduation-cap"></i> Educación</h3>
-                
-                <div class="box epic-box" data-aos="fade-right">
-                    <span><strong>( 2025 - 2026 )</strong></span>
-                    <h3>MÁSTER EN MARKETING DIGITAL Y ANALÍTICO</h3>
-                    <p class="university-name">UNIVERSIDAD DE MURCIA</p>
-                    <p>Formación avanzada enfocada en estrategias de marketing digital, análisis profundo de datos, SEO, SEM, visualización de métricas y optimización de conversiones para liderar proyectos digitales.</p>
-                </div>
-
-                <div class="box epic-box" data-aos="fade-right">
-                    <span><strong>( 2021 - 2025 )</strong></span>
-                    <h3>GRADO EN GESTIÓN DE INFORMACIÓN Y CONTENIDOS DIGITALES</h3>
-                    <p class="university-name">UNIVERSIDAD DE MURCIA</p>
-                    <p>Diseño y gestión de sistemas de información, desarrollo de productos digitales, comunicación en redes y tratamiento de datos adaptados a la economía digital.</p>
-                </div>
-
-                <div class="box epic-box" data-aos="fade-right">
-                    <span><strong>( 2024 - 2025 )</strong></span>
-                    <h3>Especialización en Python & Django</h3>
-                    <p>Amd Formación / Udemy / SEF. Desarrollo de aplicaciones web completas, análisis de datos y fundamentos de programación.</p>
+            <div class="skill-category">
+                <h4><i class="fab fa-python"></i> Data & Python</h4>
+                <div class="tags">
+                    <span>Python</span> <span>Pandas</span> <span>NumPy</span> <span>Matplotlib</span> <span>Machine Learning</span>
                 </div>
             </div>
-            
-            <!-- Experiencia -->
-            <div class="box-container">
-                <h3 class="title" data-aos="fade-left"><i class="fas fa-briefcase"></i> Experiencia</h3>
-                
-                <div class="box epic-box" data-aos="fade-left">
-                    <span><strong>( 2024 - Actualidad )</strong></span>
-                    <h3>Front-End Developer y Community Manager</h3>
-                    <p>Creador y gestor web de <strong>novarum.es</strong> y <strong>curtioliva.es</strong>. Responsable del desarrollo front-end, SEO básico y gestión estratégica de redes sociales.</p>
-                </div>
-                
-                <div class="box epic-box" data-aos="fade-left">
-                    <span><strong>( 2025 - Actualidad )</strong></span>
-                    <h3>Gestor Web & Community Manager en CTCON</h3>
-                    <p>Mantenimiento y mejora de la web del Centro Tecnológico de la Construcción. Creación de contenidos, vigilancia tecnológica, SEO y análisis de datos.</p>
-                </div>
 
-                <div class="box epic-box" data-aos="fade-left">
-                    <span><strong>( 2014 - 2021 )</strong></span>
-                    <h3>Responsable de Logística (AMC)</h3>
-                    <p>Coordinación de recepción y distribución, gestión de inventarios y bases de datos internas asegurando la trazabilidad logística.</p>
+            <div class="skill-category">
+                <h4><i class="fas fa-code"></i> Desarrollo Web</h4>
+                <div class="tags">
+                    <span>HTML5</span> <span>CSS3</span> <span>JavaScript</span> <span>PHP</span> <span>WordPress</span> <span>Bases de Datos</span>
+                </div>
+            </div>
+
+            <div class="skill-category">
+                <h4><i class="fas fa-chart-line"></i> Marketing & SEO</h4>
+                <div class="tags">
+                    <span>Analítica Web</span> <span>SEO On-Page</span> <span>Community Management</span> <span>Estrategia Digital</span>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Services Section -->
-<section class="services" id="services">
-    <h1 class="heading" data-aos="fade-up"> <span>Mis Servicios</span> </h1>
-    
-    <div class="box-container">
-        <div class="box" data-aos="zoom-in">
-            <i class="fas fa-bullseye"></i>
-            <h3>Marketing Analítico</h3>
-            <p>Estrategias basadas en datos. Optimización de conversiones, análisis de métricas y crecimiento digital escalable.</p>
+<!-- Resume Section (Timeline Vertical) -->
+<section class="resume" id="resume">
+    <div class="section-title" data-aos="fade-up">
+        <h2>Mi <span>Trayectoria</span></h2>
+        <p>Educación y experiencia laboral</p>
+    </div>
+
+    <div class="timeline">
+        <!-- Item 1: Master (Destacado) -->
+        <div class="timeline-item" data-aos="fade-up">
+            <div class="timeline-dot highlight"></div>
+            <div class="timeline-content highlight-content">
+                <span class="date">2025 - 2026</span>
+                <h3>Máster en Marketing Digital y Analítico</h3>
+                <h4>Universidad de Murcia</h4>
+                <p>Formación superior en estrategias de marketing, análisis avanzado de métricas, SEO, SEM y conversión.</p>
+            </div>
         </div>
-        <div class="box" data-aos="zoom-in">
-            <i class="fab fa-wordpress"></i>
-            <h3>Desarrollo WordPress</h3>
-            <p>Creación de sitios web profesionales, rápidos y optimizados con CMS. (WooCommerce, Elementor, themes a medida).</p>
+
+        <!-- Item 2: Exp 1 -->
+        <div class="timeline-item" data-aos="fade-up">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+                <span class="date">2024 - Actualidad</span>
+                <h3>Front-End Developer & Community Manager</h3>
+                <h4>novarum.es y curtioliva.es</h4>
+                <p>Desarrollo web, mantenimiento técnico, optimización SEO y gestión estratégica de redes sociales corporativas.</p>
+            </div>
         </div>
-        <div class="box" data-aos="zoom-in">
-            <i class="fas fa-code"></i>
-            <h3>Programación Python</h3>
-            <p>Automatización de procesos, análisis de datos con Pandas/NumPy y desarrollo de scripts a medida.</p>
+
+        <!-- Item 3: Grado -->
+        <div class="timeline-item" data-aos="fade-up">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+                <span class="date">2021 - 2025</span>
+                <h3>Grado en Gestión de Información y Contenidos Digitales</h3>
+                <h4>Universidad de Murcia</h4>
+                <p>Diseño y gestión de sistemas de información, desarrollo multimedia y comunicación en entornos digitales.</p>
+            </div>
         </div>
-        <div class="box" data-aos="zoom-in">
-            <i class="fas fa-search"></i>
-            <h3>SEO & Posicionamiento</h3>
-            <p>Auditorías SEO, búsqueda de palabras clave y optimización On-Page para destacar en Google.</p>
-        </div>
-        <div class="box" data-aos="zoom-in">
-            <i class="fas fa-laptop-code"></i>
-            <h3>Desarrollo Front-End</h3>
-            <p>Diseño web moderno e interactivo utilizando HTML5, CSS3 y JavaScript con enfoque Responsive.</p>
-        </div>
-        <div class="box" data-aos="zoom-in">
-            <i class="fas fa-database"></i>
-            <h3>Gestor Documental</h3>
-            <p>Organización, estructuración y gestión de grandes volúmenes de información y bases de datos.</p>
+
+        <!-- Item 4: Exp 2 -->
+        <div class="timeline-item" data-aos="fade-up">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+                <span class="date">2025 - Actualidad</span>
+                <h3>Back-End Developer & Community Manager</h3>
+                <h4>Centro Tecnológico de la Construcción (CTCON)</h4>
+                <p>Gestión de la web institucional, creación de contenidos, vigilancia tecnológica y estrategias de comunicación digital.</p>
+            </div>
         </div>
     </div>
 </section>
 
 <!-- Portfolio Section -->
 <section class="portfolio" id="portfolio">
-    <h1 class="heading" data-aos="fade-up"> <span>Proyectos Épicos</span> </h1>
-    <p class="portfolio-desc" data-aos="fade-up">Selección de mis mejores trabajos en Desarrollo Web, Programación y Marketing.</p>
-
-    <!-- Subcategoría 1 -->
-    <h2 class="sub-heading" data-aos="fade-up">💻 Desarrollo Web & WordPress</h2>
-    <div class="box-container">
-        <!-- Ejemplo de Proyecto WP (Aquí puedes añadir tus enlaces de WP) -->
-        <div class="box" data-aos="zoom-in">
-            <a href="#" target="_blank">
-                <div class="img-overlay">
-                    <img src="https://images.unsplash.com/photo-1616469829581-73993eb86b02?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Proyecto WordPress">
-                    <div class="view-project">Ver Proyecto <i class="fas fa-external-link-alt"></i></div>
-                </div>
-            </a>
-            <h3>E-commerce en WordPress</h3>
-            <span>(2025) - Desarrollo & SEO</span>
-        </div>
-
-        <div class="box" data-aos="zoom-in">
-            <a href="https://www.curtioliva.es" target="_blank">
-                <div class="img-overlay">
-                    <img src="curtioliva.jpg.png" alt="Diseño web para Curti Oliva">
-                    <div class="view-project">Ver Proyecto <i class="fas fa-external-link-alt"></i></div>
-                </div>
-            </a>
-            <h3>Web Corporativa Curti Oliva</h3>
-            <span>(2024) - HTML, CSS & Edición</span>
-        </div>
-
-        <div class="box" data-aos="zoom-in">
-            <a href="https://ctcon-rm.com/es/" target="_blank">
-                <div class="img-overlay">
-                    <img src="ctcon..png" alt="CTCON">
-                    <div class="view-project">Ver Proyecto <i class="fas fa-external-link-alt"></i></div>
-                </div>
-            </a>
-            <h3>Gestión Web CTCON</h3>
-            <span>(2021 - Actualidad) - CMS & Community Management</span>
-        </div>
+    <div class="section-title" data-aos="fade-up">
+        <h2>Mis <span>Proyectos</span></h2>
+        <p>Trabajos recientes en programación y diseño web</p>
     </div>
 
-    <!-- Subcategoría 2 -->
-    <h2 class="sub-heading" data-aos="fade-up" style="margin-top: 4rem;">🐍 Programación (Python & Datos)</h2>
-    <div class="box-container">
-        <div class="box" data-aos="zoom-in">
-            <a href="https://github.com/Funkillo/Titanic_Proyecto" target="_blank">
-                <div class="img-overlay">
-                    <img src="titanic_preview.png" alt="Proyecto Titanic">
-                    <div class="view-project">Ver Repositorio <i class="fab fa-github"></i></div>
-                </div>
-            </a>
-            <h3>Análisis de Datos: Titanic</h3>
-            <span>(2023 - 2024) - Python, Pandas, NumPy</span>
+    <div class="portfolio-grid">
+        <!-- Proyecto 1 -->
+        <div class="portfolio-card" data-aos="zoom-in">
+            <div class="card-img">
+                <img src="curtioliva.jpg.png" alt="Curti Oliva">
+            </div>
+            <div class="card-info">
+                <span class="category">Desarrollo Web</span>
+                <h3>Web Corporativa Curti Oliva</h3>
+                <a href="https://www.curtioliva.es" target="_blank" class="card-link"><i class="fas fa-arrow-right"></i></a>
+            </div>
         </div>
 
-        <div class="box" data-aos="zoom-in">
-            <a href="https://github.com/Funkillo/Juego_STUPIKDO" target="_blank">
-                <div class="img-overlay">
-                    <img src="intro.jpg" alt="Captura del juego Stupikdo">
-                    <div class="view-project">Ver Repositorio <i class="fab fa-github"></i></div>
-                </div>
-            </a>
-            <h3>Videojuego "STUPIKDO"</h3>
-            <span>(2021 - 2022) - Desarrollo en Python</span>
+        <!-- Proyecto 2 -->
+        <div class="portfolio-card" data-aos="zoom-in" data-aos-delay="100">
+            <div class="card-img">
+                <img src="titanic_preview.png" alt="Titanic Python">
+            </div>
+            <div class="card-info">
+                <span class="category">Data Science / Python</span>
+                <h3>Análisis de Datos: Titanic</h3>
+                <a href="https://github.com/Funkillo/Titanic_Proyecto" target="_blank" class="card-link"><i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+
+        <!-- Proyecto 3 -->
+        <div class="portfolio-card" data-aos="zoom-in" data-aos-delay="200">
+            <div class="card-img">
+                <img src="Novarum.es.png" alt="Novarum">
+            </div>
+            <div class="card-info">
+                <span class="category">HTML / CSS / JS</span>
+                <h3>Desarrollo Web Novarum</h3>
+                <a href="https://www.curtioliva.es" target="_blank" class="card-link"><i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+
+        <!-- Proyecto 4 -->
+        <div class="portfolio-card" data-aos="zoom-in">
+            <div class="card-img">
+                <img src="ctcon..png" alt="CTCON">
+            </div>
+            <div class="card-info">
+                <span class="category">Gestión CMS</span>
+                <h3>Web Institucional CTCON</h3>
+                <a href="https://ctcon-rm.com/es/" target="_blank" class="card-link"><i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+
+        <!-- Proyecto 5 -->
+        <div class="portfolio-card" data-aos="zoom-in" data-aos-delay="100">
+            <div class="card-img">
+                <img src="intro.jpg" alt="Juego Stupikdo">
+            </div>
+            <div class="card-info">
+                <span class="category">Juego Python</span>
+                <h3>Videojuego "Stupikdo"</h3>
+                <a href="https://github.com/Funkillo/Juego_STUPIKDO" target="_blank" class="card-link"><i class="fas fa-arrow-right"></i></a>
+            </div>
         </div>
     </div>
 </section>
 
 <!-- Contact Section -->
 <section class="contact" id="contact">
-    <h1 class="heading" data-aos="fade-up"> <span>Hablemos</span> </h1>
+    <div class="section-title" data-aos="fade-up">
+        <h2>Trabajemos <span>Juntos</span></h2>
+        <p>Contacta conmigo para proyectos o colaboraciones</p>
+    </div>
 
-    <div class="box-container">
-        <div class="box glow-box" data-aos="zoom-in">
-            <i class="fas fa-phone"></i>
+    <div class="contact-grid">
+        <div class="contact-box" data-aos="fade-up">
+            <i class="fas fa-phone-alt"></i>
             <h3>Teléfono</h3>
-            <p>+34 633-698-035</p>
+            <p>+34 633 698 035</p>
         </div>
-        <div class="box glow-box" data-aos="zoom-in">
+        <div class="contact-box" data-aos="fade-up" data-aos-delay="100">
             <i class="fas fa-envelope"></i>
             <h3>Email</h3>
             <p>juanantonio.sanchezm@um.es</p>
         </div>
-        <div class="box glow-box" data-aos="zoom-in">
+        <div class="contact-box" data-aos="fade-up" data-aos-delay="200">
             <i class="fas fa-map-marker-alt"></i>
             <h3>Ubicación</h3>
-            <p>Murcia, España (30500)</p>
+            <p>Murcia, España</p>
         </div>
     </div>
 </section>
 
-<div class="credit">
-    &copy; 2025 Juan Antonio Sánchez Marín. | Creado con <span>pasión y código</span>.
-</div>
+<footer>
+    <p>&copy; 2025 Juan Antonio Sánchez Marín. Diseñado desde cero.</p>
+</footer>
 
 <!-- JS Scripts -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 <script>
-    // Inicializar AOS (Animaciones)
+    // Inicializar AOS
     AOS.init({
         duration: 800,
-        delay: 100,
-        once: true // La animación solo se reproduce una vez al bajar
+        once: true
     });
 
-    // Lógica del Botón "Like" (Empieza en 1435)
+    // Lógica del Botón de Like
     const likeBtn = document.getElementById('likebtn');
     const likeCountSpan = document.getElementById('like-count');
     let currentLikes = 1435;
     
-    // Mostrar valor inicial
-    likeCountSpan.textContent = currentLikes;
-
     likeBtn.addEventListener('click', () => {
         currentLikes++;
         likeCountSpan.textContent = currentLikes;
         
-        // Añadir una pequeña animación de pulso
-        likeBtn.style.transform = 'scale(1.15)';
-        likeBtn.style.color = '#fff';
+        // Efecto visual al hacer clic
+        likeBtn.style.transform = 'scale(1.1)';
         setTimeout(() => {
             likeBtn.style.transform = 'scale(1)';
         }, 200);
     });
 
-    // Lógica del menú móvil
-    const menuBtn = document.getElementById('menu-btn');
-    const header = document.querySelector('.header');
+    // Lógica del Menú Móvil
+    const menuToggle = document.getElementById('menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
 
-    menuBtn.addEventListener('click', () => {
-        menuBtn.classList.toggle('fa-times');
-        header.classList.toggle('active');
+    menuToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+        menuToggle.classList.toggle('fa-times');
     });
 
-    window.onscroll = () => {
-        menuBtn.classList.remove('fa-times');
-        header.classList.remove('active');
-    }
+    // Cerrar menú al hacer clic en un enlace
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+            navLinks.classList.remove('active');
+            menuToggle.classList.remove('fa-times');
+        });
+    });
+
+    // Cambiar estilo del header al hacer scroll
+    window.addEventListener('scroll', () => {
+        const header = document.querySelector('.navbar-glass');
+        if(window.scrollY > 50) {
+            header.style.boxShadow = '0 5px 20px rgba(0,0,0,0.05)';
+            header.style.background = 'rgba(255, 255, 255, 0.95)';
+        } else {
+            header.style.boxShadow = 'none';
+            header.style.background = 'rgba(255, 255, 255, 0.8)';
+        }
+    });
 </script>
 </body>
 </html>

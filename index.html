@@ -1,425 +1,345 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-   <meta charset="UTF-8">
-   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Porfolio Juan Antonio Sánchez Marín</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Juan Antonio Sánchez Marín</title>
 
-   <!-- font awesome cdn link  -->
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+    <!-- Google Fonts: Poppins para un toque más moderno -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-   <!-- aos css link  -->
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <!-- AOS CSS (Animaciones) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
 
-   <!-- custom css file link  -->
-   <link rel="stylesheet" href="style.css">
-
-   <style> #ultimo + div{
-         visibility: hidden;
-   }</style>
-
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-
-<!-- header section starts  -->
-
+<!-- Header Section -->
 <header class="header">
+    <div id="menu-btn" class="fas fa-bars"></div>
+    
+    <a href="#home" class="logo">Portfolio.</a>
+    
+    <!-- Botón de Like Épico -->
+    <button id="likebtn" class="glow-on-hover">
+        <i class="fas fa-heart"></i> <span id="like-count">1435</span>
+    </button>
 
-   <div id="menu-btn" class="fas fa-bars"></div>
-   
-   <a href="#home" class="logo"> Portfolio</a>
-   <button id="likebtn">Me gusta &hearts; <span id="like-count">0</span></button>
-   <nav class="navbar">
-      
-      <a href="#home" class="active">inicio</a>
-      <a href="#about">acerca de</a>
-      <a href="#services">servicios</a>
-      <a href="#portfolio">portfolio</a>
-      <a href="#contact">contacto</a>
-   </nav>
+    <nav class="navbar">
+        <a href="#home" class="active">Inicio</a>
+        <a href="#about">Acerca de</a>
+        <a href="#services">Servicios</a>
+        <a href="#portfolio">Proyectos</a>
+        <a href="#contact">Contacto</a>
+    </nav>
 
-   <div class="follow">
-      <a href="https://twitter.com/FunkilloR" class="fab fa-twitter"></a>
-      <a href="https://www.instagram.com/jmarinn92/" class="fab fa-instagram"></a>
-      <a href="https://www.linkedin.com/in/juan-antonio-s%C3%A1nchez-mar%C3%ADn-024b79257/" class="fab fa-linkedin"></a>
-      <a href="https://github.com/Funkillo" class="fab fa-github"></a>
-   </div>
-
+    <div class="follow">
+        <a href="https://twitter.com/FunkilloR" class="fab fa-twitter" target="_blank"></a>
+        <a href="https://www.instagram.com/jmarinn92/" class="fab fa-instagram" target="_blank"></a>
+        <a href="https://www.linkedin.com/in/juan-antonio-s%C3%A1nchez-mar%C3%ADn-024b79257/" class="fab fa-linkedin" target="_blank"></a>
+        <a href="https://github.com/Funkillo" class="fab fa-github" target="_blank"></a>
+    </div>
 </header>
 
-<!-- header section ends -->
-
-<!-- home section starts  -->
-
+<!-- Home Section -->
 <section class="home" id="home">
-   
-   <div class="image" data-aos="fade-right">
-      <img src="fotomia.jpg" alt="">
-       
-      
-
-      
-   </div>
-   
-  
-   <div class="content">
-      <h3 data-aos="fade-up">JUAN ANTONIO </h3>
-      <span data-aos="fade-up">Diseñador y Programador Web</span>
-      
-      <p data-aos="fade-up">Creador digital con formación en Gestión de Información y Contenidos Digitales. Combino programación, diseño web y análisis de datos para desarrollar experiencias digitales funcionales, accesibles y adaptadas a distintos entornos, públicos y objetivos.
-</p>
-      <a data-aos="fade-up" href="#about" class="btn">Acerca de </a>
-      
-   </div>
-
+    <div class="image" data-aos="fade-right">
+        <!-- Asegúrate de tener tu foto en la misma carpeta o actualiza la ruta -->
+        <img src="fotomia.jpg" alt="Foto de Juan Antonio">
+    </div>
+    
+    <div class="content">
+        <h3 data-aos="fade-up">JUAN ANTONIO</h3>
+        <span data-aos="fade-up" class="subtitle-badge">Desarrollador Web & Analista Digital</span>
+        
+        <p data-aos="fade-up">
+            Creador digital con formación en Gestión de Información y Contenidos Digitales. 
+            Combino programación, diseño web y <strong>marketing digital analítico</strong> para desarrollar 
+            experiencias digitales épicas, funcionales y orientadas a resultados.
+        </p>
+        <a data-aos="fade-up" href="#portfolio" class="btn">Ver mis proyectos <i class="fas fa-arrow-right"></i></a>
+    </div>
 </section>
 
-<!-- home section ends -->
-
-<!-- about section starts  -->
-
+<!-- About Section -->
 <section class="about" id="about">
+    <h1 class="heading" data-aos="fade-up"> <span>Biografía</span> </h1>
 
-   <h1 class="heading" data-aos="fade-up"> <span>biografía</span> </h1>
+    <div class="biography">
+        <p data-aos="fade-up">"La programación, el diseño web y el análisis de datos son las herramientas perfectas para crear experiencias digitales que no solo impactan visualmente, sino que convierten."</p>
 
-   <div class="biography">
+        <div class="bio">
+            <h3 data-aos="zoom-in"> <span>Nombre : </span> Juan Antonio </h3>
+            <h3 data-aos="zoom-in"> <span>Email : </span> juanantonio.sanchezm@um.es</h3>
+            <h3 data-aos="zoom-in"> <span>Ubicación : </span> Murcia, España</h3>
+            <h3 data-aos="zoom-in"> <span>Edad : </span> 33 años </h3>
+            <h3 data-aos="zoom-in"> <span>Experiencia : </span> +2 años </h3>
+        </div>
 
-      <p data-aos="fade-up">La programación y el diseño web son dos caras de la misma moneda, trabajando juntas para crear experiencias digitales impactantes y funcionales</p>
+        <a href="https://drive.google.com/file/d/14nNCoLJqllwpwbAbLhM00xUMhK6Wyele/view?usp=sharing" target="_blank" class="btn" data-aos="fade-up"><i class="fas fa-download"></i> Descargar CV</a>
+    </div>
 
-      <div class="bio">
-         <h3 data-aos="zoom-in"> <span>nombre : </span> Juan Antonio  </h3>
-         <h3 data-aos="zoom-in"> <span>email : </span> juanantonio.sanchezm@um.es</h3>
-         <h3 data-aos="zoom-in"> <span>dirección : </span> España, Murcia</h3>
-         <h3 data-aos="zoom-in"> <span>teléfono : </span> +34 633-698-035</h3>
-         <h3 data-aos="zoom-in"> <span>edad : </span> 33 años </h3>
-         <h3 data-aos="zoom-in"> <span>experiencia  : </span> +2 año </h3>
-      </div>
+    <!-- Skills -->
+    <h1 class="heading" style="margin-top: 5rem;"><span>Skills & Tecnologías</span></h1>
+    <div class="progress">
+        <div class="bar" data-aos="fade-up">
+            <h3><span>Python & Data</span> <span>75%</span></h3>
+            <span class="subtext">Pandas, NumPy, Matplotlib, Seaborn, Machine Learning Básico</span>
+        </div>
+        <div class="bar" data-aos="fade-up" data-aos-delay="100">
+            <h3><span>Desarrollo Web Front-End</span> <span>70%</span></h3>
+            <span class="subtext">HTML5, CSS3, JavaScript, Responsive Design, Animaciones</span>
+        </div>
+        <div class="bar" data-aos="fade-up" data-aos-delay="200">
+            <h3><span>Marketing Digital & SEO</span> <span>80%</span></h3>
+            <span class="subtext">Analítica Web, Estrategias SEO/SEM, Optimización, WordPress</span>
+        </div>
+        <div class="bar" data-aos="fade-up" data-aos-delay="300">
+            <h3><span>Bases de Datos & Backend</span> <span>60%</span></h3>
+            <span class="subtext">MySQL, PHP, SQLite, Django (básico)</span>
+        </div>
+    </div>
 
-      <a href="https://drive.google.com/file/d/14nNCoLJqllwpwbAbLhM00xUMhK6Wyele/view?usp=sharing" class="btn" data-aos="fade-up">descargar  CV</a>
-      <!-- Creo estos comentarios para añadir espacio. -->
-      
-   </div>
-   <hr style="width: 80%; margin: 60px auto; border: 1px solid #000000;">
+    <!-- Education & Experience -->
+    <div class="edu-exp">
+        <h1 class="heading" data-aos="fade-up" style="margin-top: 5rem;"> <span>Trayectoria</span> </h1>
+        <div class="row">
+            
+            <!-- Educación -->
+            <div class="box-container">
+                <h3 class="title" data-aos="fade-right"><i class="fas fa-graduation-cap"></i> Educación</h3>
+                
+                <div class="box epic-box" data-aos="fade-right">
+                    <span><strong>( 2025 - 2026 )</strong></span>
+                    <h3>MÁSTER EN MARKETING DIGITAL Y ANALÍTICO</h3>
+                    <p class="university-name">UNIVERSIDAD DE MURCIA</p>
+                    <p>Formación avanzada enfocada en estrategias de marketing digital, análisis profundo de datos, SEO, SEM, visualización de métricas y optimización de conversiones para liderar proyectos digitales.</p>
+                </div>
 
-   <h1 class="heading"><span>Skills</span></h1>
+                <div class="box epic-box" data-aos="fade-right">
+                    <span><strong>( 2021 - 2025 )</strong></span>
+                    <h3>GRADO EN GESTIÓN DE INFORMACIÓN Y CONTENIDOS DIGITALES</h3>
+                    <p class="university-name">UNIVERSIDAD DE MURCIA</p>
+                    <p>Diseño y gestión de sistemas de información, desarrollo de productos digitales, comunicación en redes y tratamiento de datos adaptados a la economía digital.</p>
+                </div>
 
-<div class="progress">
-
-   <div class="bar" data-aos="fade-left">
-      <h3>
-         <span>Python</span>
-         <span>70%</span>
-      </h3>
-      <span class="subtext">pandas, numpy, matplotlib, seaborn, sklearn </span>
-   </div>
-
-   <div class="bar" data-aos="fade-right">
-      <h3>
-         <span>HTML</span>
-         <span>65%</span>
-      </h3>
-      <span class="subtext">Estructura semántica, formularios, accesibilidad</span>
-   </div>
-
-   <div class="bar" data-aos="fade-left">
-      <h3>
-         <span>CSS</span>
-         <span>55%</span>
-      </h3>
-      <span class="subtext">Flexbox, grid, responsive, animaciones</span>
-   </div>
-
-   <div class="bar" data-aos="fade-right">
-      <h3>
-         <span>JavaScript</span>
-         <span>60%</span>
-      </h3>
-      <span class="subtext">DOM, eventos, fetch, JSON, interacción básica</span>
-   </div>
-
-   <div class="bar" data-aos="fade-left">
-      <h3>
-         <span>PHP</span>
-         <span>55%</span>
-      </h3>
-      <span class="subtext">Backend básico, formularios, integración con HTML</span>
-   </div>
-
-   <div class="bar" data-aos="fade-right">
-      <h3>
-         <span>Bases de Datos</span>
-         <span>60%</span>
-      </h3>
-      <span class="subtext">MySQL, SQLite, consultas SQL, diseño relacional</span>
-   </div>
-
-   <div class="bar" data-aos="fade-left">
-      <h3>
-         <span>Git / GitHub</span>
-         <span>50%</span>
-      </h3>
-      <span class="subtext">Control de versiones, ramas, commits, colaboración</span>
-   </div>
-
-</div>
-
-<hr style="width: 80%; margin: 60px auto; border: 1px solid #000000;">
-
-
-      <div class="edu-exp">
-
-         <h1 class="heading" data-aos="fade-up"> <span>Educación y experiencia</span> </h1>
-         <br>
-      
-      <div class="row">
-      
-         <div class="box-container">
-      
-            <h3 class="title" data-aos="fade-right">Educación</h3>
-      
-            <div class="box" data-aos="fade-right">
-               <span><STRONG>( 2021 - 2025 )</STRONG></span>
-               <h3>GRADO EN GESTIÓN DE INFORMACIÓN Y CONTENIDOS DIGITALES<Strong> -UNIVERSIDAD DE MURCIA</Strong></h3>
-               <p style="text-align: justify;"> Grado en Gestión de Información y Contenidos Digitales, impartido en la Facultad de Comunicación y Documentación de la Universidad de Murcia, forma profesionales capaces de diseñar y gestionar sistemas de información adaptados a la economía digital.
-
-Entre sus competencias destacan el tratamiento de información y documentación en cualquier formato, el desarrollo de productos y servicios digitales —como sitios web o contenidos multimedia—, la comunicación en entornos digitales (incluyendo redes sociales), y el asesoramiento en aspectos legales vinculados a la protección de datos, la ética y la transparencia.
-
-</p>
+                <div class="box epic-box" data-aos="fade-right">
+                    <span><strong>( 2024 - 2025 )</strong></span>
+                    <h3>Especialización en Python & Django</h3>
+                    <p>Amd Formación / Udemy / SEF. Desarrollo de aplicaciones web completas, análisis de datos y fundamentos de programación.</p>
+                </div>
             </div>
-            <div class="box" data-aos="fade-right">
-               <span><STRONG>( 2024- 2025 )</STRONG></span>
-               <h3>Instituto Vega del Tader</h3>
-               <p style="text-align: justify;">Bachillerato en Ciencias Sociales y título de Graduado en Educación Secundaria Obligatoria.</p>
-            </div>
-           <div class="box" data-aos="fade-right">
-   <span><strong>( 2024- 2025 )</strong></span>
-   <h3>Amd Formación - Udemy</h3>
-   <p style="text-align: justify;">
-      Curso de Python (100 horas) homologado por el SEF, impartido a través de CONTALAE, centrado en fundamentos de programación, estructuras de datos, funciones, módulos y gestión de ficheros en Python.
-   </p>
-   <p style="text-align: justify;">
-      Curso de Python con Django (90 horas) realizado en Udemy, enfocado al desarrollo de aplicaciones web completas utilizando el framework Django, incluyendo modelos, vistas, formularios, autenticación y despliegue en servidores.
-   </p>
-</div>
-         </div>
-         
-         <div class="box-container">
-      
-            <h3 class="title" data-aos="fade-left">experiencia</h3>
-      
-            <div class="box" data-aos="fade-left">
-               <span><strong>( 2024 - 2025 ACTUALIDAD)</strong></span>
-               <h3>Front-End Developer y Community Manager</h3>
-               <p style="text-align: justify;">Creador y gestor web de www.novarum.es y www.curtioliva.es, desempeñando funciones como desarrollador front-end, administrador de contenidos y community manager. Responsable del mantenimiento técnico, actualización de la información, posicionamiento web (SEO básico) y gestión de redes sociales corporativas para ambas empresas.
+            
+            <!-- Experiencia -->
+            <div class="box-container">
+                <h3 class="title" data-aos="fade-left"><i class="fas fa-briefcase"></i> Experiencia</h3>
+                
+                <div class="box epic-box" data-aos="fade-left">
+                    <span><strong>( 2024 - Actualidad )</strong></span>
+                    <h3>Front-End Developer y Community Manager</h3>
+                    <p>Creador y gestor web de <strong>novarum.es</strong> y <strong>curtioliva.es</strong>. Responsable del desarrollo front-end, SEO básico y gestión estratégica de redes sociales.</p>
+                </div>
+                
+                <div class="box epic-box" data-aos="fade-left">
+                    <span><strong>( 2025 - Actualidad )</strong></span>
+                    <h3>Gestor Web & Community Manager en CTCON</h3>
+                    <p>Mantenimiento y mejora de la web del Centro Tecnológico de la Construcción. Creación de contenidos, vigilancia tecnológica, SEO y análisis de datos.</p>
+                </div>
 
-</p>
+                <div class="box epic-box" data-aos="fade-left">
+                    <span><strong>( 2014 - 2021 )</strong></span>
+                    <h3>Responsable de Logística (AMC)</h3>
+                    <p>Coordinación de recepción y distribución, gestión de inventarios y bases de datos internas asegurando la trazabilidad logística.</p>
+                </div>
             </div>
-      
-            <div class="box" data-aos="fade-left">
-               <span><strong>( 2025 - ACTUALIDAD )</strong></span>
-                <h3>Back-End Developer y Community Manager</h3>
-               <p style="text-align: justify;">
-      Actualmente trabajo en el Centro Tecnológico de la Construcción (CTCON) como responsable de la gestión y actualización de la página web institucional, así como Community Manager de la entidad. Entre mis funciones destacan la creación y edición de contenidos digitales, la gestión de redes sociales, el diseño de campañas informativas y la ejecución de tareas de vigilancia tecnológica para el seguimiento de proyectos de innovación. También colaboro en el mantenimiento y mejora de la presencia online de CTCON, aplicando técnicas de posicionamiento SEO, análisis de datos y estrategias de comunicación digital.
-   </p>
-</div>
-      
-            <div class="box" data-aos="fade-left">
-               <span><strong>( 2014- 2021 )</strong></span>
-               <h3>Responsable de Logística y Gestión de Aditivos</h3>
-                  <p style="text-align: justify;">
-      Durante mi etapa en AMC trabajé como responsable de logística y de la sección de aditivos. Me encargaba de coordinar la recepción y distribución de materiales, gestionar los inventarios mediante bases de datos internas y controlar el stock de aditivos utilizados en los procesos de producción. Entre mis funciones también se incluía la organización de pedidos, el seguimiento de albaranes y la supervisión de tareas logísticas para asegurar la trazabilidad y el correcto almacenamiento de productos.
-   </p>
-
-            </div>
-      
-          </div>
-   </div>
-<hr style="width: 80%; margin: 60px auto; border: 1px solid #000000;">
-
+        </div>
+    </div>
 </section>
 
-<!-- about section ends -->
-
-<!-- services section starts  -->
-
+<!-- Services Section -->
 <section class="services" id="services">
-
-   <h1 class="heading" data-aos="fade-up"> <span>servicios</span> </h1>
-   
-   <div class="box-container">
-   
-      <div class="box" data-aos="zoom-in">
-         <i class="fas fa-code"></i>
-         <h3>Programador</h3>
-         <p>Desarrollador  especializado en Python, con experiencia en automatización, análisis de datos y visualización.
-
-</p>
-      </div>
-   
-      <div class="box" data-aos="zoom-in">
-         <i class="fas fa-paint-brush"></i>
-         <h3>Diseñador gráfico</h3>
-         <p>Poseo habilidades intermedias en diseño gráfico utilizando herramientas como Adobe Illustrator y Photoshop.</p>
-      </div>
-   
-      <div class="box" data-aos="zoom-in">
-         <i class="fab fa-bootstrap"></i>
-         <h3>Gestor/a documental de calidad</h3>
-         <p> gestor de información y documentalista, cuento con sólida formación.</p>
-      </div>
-   
-      <div class="box" data-aos="zoom-in">
-         <i class="fas fa-chart-line"></i>
-         <h3>Seo marketing</h3>
-         <p>Experto En Herramientas De Seo Y En Posicionamiento De Redes Sociales Y Gestión De Empresas.</p>
-      </div>
-   
-      <div class="box" data-aos="zoom-in">
-         <i class="fas fa-bullhorn"></i>
-         <h3>Marketing digital</h3>
-         <p>Experto en marketing digital, ayudando a las empresas a crecer y destacar en el entorno digital.</p>
-      </div>
-   
-      <div class="box" data-aos="zoom-in">
-         <i class="fab fa-wordpress"></i>
-         <h3>wordpress</h3>
-         <p>Con habilidades en la gestión de varios sistemas de gestión de contenidos (CMS), incluyendo WordPress y Drupal.</p>
-      </div>
-   
-      </div>
-   
-   </section>
-
-<!-- services section ends -->
-
-<!-- portfolio section starts  -->
-
-<<section class="portfolio" id="portfolio">
-
-   <h1 class="heading" data-aos="fade-up"> <span>portafolio</span> </h1>
-
-   <div class="box-container">
-
-      <div class="box" data-aos="zoom-in">
-         <a href="https://github.com/Funkillo/Juego_STUPIKDO" target="_blank">
-            <img src="intro.jpg" alt="Captura del juego Stupikdo">
-         </a>
-         <h3>GAME PYTHON "STUPIKDO"</h3>
-         <span>(2021 - 2022)</span>
-      </div>
-
-      <div class="box" data-aos="zoom-in">
-         <a href="https://github.com/Funkillo/Titanic_Proyecto" target="_blank">
-            <img src="titanic_preview.png" alt="Proyecto Titanic con pandas">
-         </a>
-         <h3>Proyecto de Análisis y Visualización de Datos con Python, pandas y NumPy</h3>
-         <span>(2023 - 2024)</span>
-      </div>
-
-      <div class="box" data-aos="zoom-in">
-         <a href="https://www.curtioliva.es" target="_blank">
-            <img src="curtioliva.jpg.png" alt="Diseño web para Curti Oliva">
-         </a>
-         <h3>Edición Digital con Filmora X y Diseño Web con HTML y CSS3</h3>
-         <span>(2024 - 2025)</span>
-      </div>
-
-      <div class="box" data-aos="zoom-in">
-          <a href="https://www.curtioliva.es" target="_blank">
-         <img src="Novarum.es.png" alt="Visualización de datos estadísticos">
-         </a>
-         <h3>Desarrollo Web de novarum.es con HTML, CSS3 y JavaScript</h3>
-         <span>(2024 - 2025)</span>
-      </div>
-
-      <div class="box" data-aos="zoom-in">
-         <a href="https://ctcon-rm.com/es/" target="_blank">
-            <img src="ctcon..png" alt="Proyecto HTML">
-         </a>
-         <h3>Responsable de Comunicación y Community Manager en CTCON</h3>
-         <span>(2021 - 2022)</span>
-      </div>
-
-      <div class="box" data-aos="zoom-in">
-         <img src="6.jpg" alt="Diseño gráfico de comunión">
-         <h3>Diseño gráfico con Illustrator "Comunión"</h3>
-         <span>(2021 - 2022)</span>
-      </div>
-
-   </div>
+    <h1 class="heading" data-aos="fade-up"> <span>Mis Servicios</span> </h1>
+    
+    <div class="box-container">
+        <div class="box" data-aos="zoom-in">
+            <i class="fas fa-bullseye"></i>
+            <h3>Marketing Analítico</h3>
+            <p>Estrategias basadas en datos. Optimización de conversiones, análisis de métricas y crecimiento digital escalable.</p>
+        </div>
+        <div class="box" data-aos="zoom-in">
+            <i class="fab fa-wordpress"></i>
+            <h3>Desarrollo WordPress</h3>
+            <p>Creación de sitios web profesionales, rápidos y optimizados con CMS. (WooCommerce, Elementor, themes a medida).</p>
+        </div>
+        <div class="box" data-aos="zoom-in">
+            <i class="fas fa-code"></i>
+            <h3>Programación Python</h3>
+            <p>Automatización de procesos, análisis de datos con Pandas/NumPy y desarrollo de scripts a medida.</p>
+        </div>
+        <div class="box" data-aos="zoom-in">
+            <i class="fas fa-search"></i>
+            <h3>SEO & Posicionamiento</h3>
+            <p>Auditorías SEO, búsqueda de palabras clave y optimización On-Page para destacar en Google.</p>
+        </div>
+        <div class="box" data-aos="zoom-in">
+            <i class="fas fa-laptop-code"></i>
+            <h3>Desarrollo Front-End</h3>
+            <p>Diseño web moderno e interactivo utilizando HTML5, CSS3 y JavaScript con enfoque Responsive.</p>
+        </div>
+        <div class="box" data-aos="zoom-in">
+            <i class="fas fa-database"></i>
+            <h3>Gestor Documental</h3>
+            <p>Organización, estructuración y gestión de grandes volúmenes de información y bases de datos.</p>
+        </div>
+    </div>
 </section>
 
-   <!-- TITULOS -->
-   
-         <!-- fin titulos -->
-<!-- portfolio section ends -->
+<!-- Portfolio Section -->
+<section class="portfolio" id="portfolio">
+    <h1 class="heading" data-aos="fade-up"> <span>Proyectos Épicos</span> </h1>
+    <p class="portfolio-desc" data-aos="fade-up">Selección de mis mejores trabajos en Desarrollo Web, Programación y Marketing.</p>
 
-<!-- contact section starts  -->
-<hr style="width: 80%; margin: 60px auto; border: 1px solid #000000;">
+    <!-- Subcategoría 1 -->
+    <h2 class="sub-heading" data-aos="fade-up">💻 Desarrollo Web & WordPress</h2>
+    <div class="box-container">
+        <!-- Ejemplo de Proyecto WP (Aquí puedes añadir tus enlaces de WP) -->
+        <div class="box" data-aos="zoom-in">
+            <a href="#" target="_blank">
+                <div class="img-overlay">
+                    <img src="https://images.unsplash.com/photo-1616469829581-73993eb86b02?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Proyecto WordPress">
+                    <div class="view-project">Ver Proyecto <i class="fas fa-external-link-alt"></i></div>
+                </div>
+            </a>
+            <h3>E-commerce en WordPress</h3>
+            <span>(2025) - Desarrollo & SEO</span>
+        </div>
 
+        <div class="box" data-aos="zoom-in">
+            <a href="https://www.curtioliva.es" target="_blank">
+                <div class="img-overlay">
+                    <img src="curtioliva.jpg.png" alt="Diseño web para Curti Oliva">
+                    <div class="view-project">Ver Proyecto <i class="fas fa-external-link-alt"></i></div>
+                </div>
+            </a>
+            <h3>Web Corporativa Curti Oliva</h3>
+            <span>(2024) - HTML, CSS & Edición</span>
+        </div>
+
+        <div class="box" data-aos="zoom-in">
+            <a href="https://ctcon-rm.com/es/" target="_blank">
+                <div class="img-overlay">
+                    <img src="ctcon..png" alt="CTCON">
+                    <div class="view-project">Ver Proyecto <i class="fas fa-external-link-alt"></i></div>
+                </div>
+            </a>
+            <h3>Gestión Web CTCON</h3>
+            <span>(2021 - Actualidad) - CMS & Community Management</span>
+        </div>
+    </div>
+
+    <!-- Subcategoría 2 -->
+    <h2 class="sub-heading" data-aos="fade-up" style="margin-top: 4rem;">🐍 Programación (Python & Datos)</h2>
+    <div class="box-container">
+        <div class="box" data-aos="zoom-in">
+            <a href="https://github.com/Funkillo/Titanic_Proyecto" target="_blank">
+                <div class="img-overlay">
+                    <img src="titanic_preview.png" alt="Proyecto Titanic">
+                    <div class="view-project">Ver Repositorio <i class="fab fa-github"></i></div>
+                </div>
+            </a>
+            <h3>Análisis de Datos: Titanic</h3>
+            <span>(2023 - 2024) - Python, Pandas, NumPy</span>
+        </div>
+
+        <div class="box" data-aos="zoom-in">
+            <a href="https://github.com/Funkillo/Juego_STUPIKDO" target="_blank">
+                <div class="img-overlay">
+                    <img src="intro.jpg" alt="Captura del juego Stupikdo">
+                    <div class="view-project">Ver Repositorio <i class="fab fa-github"></i></div>
+                </div>
+            </a>
+            <h3>Videojuego "STUPIKDO"</h3>
+            <span>(2021 - 2022) - Desarrollo en Python</span>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
 <section class="contact" id="contact">
+    <h1 class="heading" data-aos="fade-up"> <span>Hablemos</span> </h1>
 
-   <h1 class="heading" data-aos="fade-up"> <span>Contacto</span> </h1>
-
-   
-
-   <div class="box-container">
-
-      <div class="box" data-aos="zoom-in">
-         <i class="fas fa-phone"></i>
-         <h3>Teléfono</h3>
-         <p>+34 633-698-035</p>
-      </div>
-
-      <div class="box" data-aos="zoom-in">
-         <i class="fas fa-envelope"></i>
-         <h3>email</h3>
-         <p>juanantonio.sanchezm@um.es</p>
-      </div>
-
-      <div class="box" data-aos="zoom-in">
-         <i class="fas fa-map-marker-alt"></i>
-         <h3>Dirección</h3>
-         <p>España, Murcia, 30500</p>
-      </div>
-      
-   </div>
-
+    <div class="box-container">
+        <div class="box glow-box" data-aos="zoom-in">
+            <i class="fas fa-phone"></i>
+            <h3>Teléfono</h3>
+            <p>+34 633-698-035</p>
+        </div>
+        <div class="box glow-box" data-aos="zoom-in">
+            <i class="fas fa-envelope"></i>
+            <h3>Email</h3>
+            <p>juanantonio.sanchezm@um.es</p>
+        </div>
+        <div class="box glow-box" data-aos="zoom-in">
+            <i class="fas fa-map-marker-alt"></i>
+            <h3>Ubicación</h3>
+            <p>Murcia, España (30500)</p>
+        </div>
+    </div>
 </section>
-
-<!-- contact section ends -->
 
 <div class="credit">
-   &copy; 2025 Juan Antonio Sánchez Marín. Todos los derechos reservados.
+    &copy; 2025 Juan Antonio Sánchez Marín. | Creado con <span>pasión y código</span>.
 </div>
 
-
-
-
-
-
-
-
-
-
-
-<!-- custom js file link  -->
-<script src="script.js"></script>
-
-<!-- aos js link  -->
+<!-- JS Scripts -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-
 <script>
+    // Inicializar AOS (Animaciones)
+    AOS.init({
+        duration: 800,
+        delay: 100,
+        once: true // La animación solo se reproduce una vez al bajar
+    });
 
-   AOS.init({
-      duration:800,
-      delay:300
-   });
-   
+    // Lógica del Botón "Like" (Empieza en 1435)
+    const likeBtn = document.getElementById('likebtn');
+    const likeCountSpan = document.getElementById('like-count');
+    let currentLikes = 1435;
+    
+    // Mostrar valor inicial
+    likeCountSpan.textContent = currentLikes;
 
+    likeBtn.addEventListener('click', () => {
+        currentLikes++;
+        likeCountSpan.textContent = currentLikes;
+        
+        // Añadir una pequeña animación de pulso
+        likeBtn.style.transform = 'scale(1.15)';
+        likeBtn.style.color = '#fff';
+        setTimeout(() => {
+            likeBtn.style.transform = 'scale(1)';
+        }, 200);
+    });
+
+    // Lógica del menú móvil
+    const menuBtn = document.getElementById('menu-btn');
+    const header = document.querySelector('.header');
+
+    menuBtn.addEventListener('click', () => {
+        menuBtn.classList.toggle('fa-times');
+        header.classList.toggle('active');
+    });
+
+    window.onscroll = () => {
+        menuBtn.classList.remove('fa-times');
+        header.classList.remove('active');
+    }
 </script>
-   
 </body>
 </html>

@@ -1,528 +1,311 @@
-/* ==================================
-   DISEÑO STARTUP / MINIMALISTA
-   ================================== */
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Juan Antonio | Portfolio 2026</title>
+    
+    <!-- Fuentes Ultra Modernas 2026: Plus Jakarta Sans -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Iconos limpios -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-:root {
-    --bg-color: #f8fafc;        /* Fondo gris súper claro */
-    --surface-color: #ffffff;   /* Blanco puro para tarjetas */
-    --text-main: #0f172a;       /* Gris oscuro para textos (Casi negro) */
-    --text-light: #64748b;      /* Gris medio para párrafos */
-    --primary: #4f46e5;         /* Azul Índigo (Acento principal) */
-    --secondary: #06b6d4;       /* Cian (Acento secundario) */
-    --gradient: linear-gradient(135deg, var(--primary), var(--secondary));
-    --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-    --shadow-md: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
-    --shadow-hover: 0 20px 40px -5px rgba(79, 70, 229, 0.15);
-    --border-radius: 16px;
-}
+    <!-- Fondo desenfocado dinámico -->
+    <div class="bg-glow"></div>
+    <div class="bg-glow bg-glow-2"></div>
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Outfit', sans-serif;
-    text-decoration: none;
-    list-style: none;
-    outline: none;
-}
+    <!-- Overlay oscuro para cuando un bloque se expande -->
+    <div class="overlay" id="overlay"></div>
 
-html {
-    font-size: 62.5%; /* 1rem = 10px */
-    scroll-behavior: smooth;
-}
+    <!-- Contenedor Principal estilo Bento Box -->
+    <main class="bento-grid">
 
-body {
-    background-color: var(--bg-color);
-    color: var(--text-main);
-    overflow-x: hidden;
-}
+        <!-- 1. BLOQUE HERO (FOTO + TÍTULO) - No expandible -->
+        <article class="bento-card hero-card" id="home">
+            <div class="hero-layout">
+                <div class="blob-avatar">
+                    <img src="fotomia.jpg" alt="Juan Antonio" onerror="this.src='https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80'">
+                </div>
+                <div class="hero-text">
+                    <span class="status-badge"><span class="dot"></span> Disponible para proyectos</span>
+                    <h1>Juan Antonio</h1>
+                    <p class="subtitle">Data & Digital Marketing</p>
+                </div>
+            </div>
+        </article>
 
-section {
-    padding: 10rem 9% 5rem;
-    min-height: 100vh;
-}
+        <!-- 2. BLOQUE BIO (Expandible) -->
+        <article class="bento-card expandable gradient-border bio-card">
+            <button class="close-btn"><i class="fas fa-times"></i></button>
+            <div class="collapsed-content">
+                <h2>Sobre mí</h2>
+                <p>Estratega digital y desarrollador orientado a datos. <span>Toca para leer más...</span></p>
+            </div>
+            <div class="expanded-content">
+                <h2 class="expanded-title">Mi Biografía</h2>
+                <p class="big-text">La programación y el diseño web son dos caras de la misma moneda. Combino el análisis de datos, Python y estrategias de marketing para crear experiencias que impactan y convierten.</p>
+                <div class="contact-pills">
+                    <span><i class="fas fa-at"></i> juanantonio.sanchezm@um.es</span>
+                    <span><i class="fas fa-map-pin"></i> Murcia, España</span>
+                    <span><i class="fas fa-phone"></i> +34 633 698 035</span>
+                </div>
+                <a href="https://drive.google.com/file/d/14nNCoLJqllwpwbAbLhM00xUMhK6Wyele/view" target="_blank" class="download-cv">Descargar CV PDF</a>
+            </div>
+        </article>
 
-/* ================= NAV SUPERIOR (GLASS) ================= */
-.navbar-glass {
-    position: fixed;
-    top: 0; left: 0; right: 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1.5rem 9%;
-    background: rgba(255, 255, 255, 0.8);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    z-index: 1000;
-    transition: 0.3s ease;
-}
+        <!-- 3. BLOQUE EDUCACIÓN (Expandible) -->
+        <article class="bento-card expandable edu-card" id="education">
+            <button class="close-btn"><i class="fas fa-times"></i></button>
+            <div class="collapsed-content">
+                <div class="card-header">
+                    <h2>Educación</h2>
+                    <div class="icon-indicator"><i class="fas fa-expand-alt"></i></div>
+                </div>
+                <h3 class="highlight-title">Máster en Marketing Digital</h3>
+                <p>Universidad de Murcia</p>
+            </div>
+            
+            <div class="expanded-content">
+                <h2 class="expanded-title">Formación Académica</h2>
+                
+                <div class="edu-modern-list">
+                    <!-- Máster Destacado -->
+                    <div class="edu-item master-item">
+                        <div class="edu-year">2025 - 2026</div>
+                        <h3>Máster en Marketing Digital y Analítico</h3>
+                        <h4>Universidad de Murcia</h4>
+                        <p>Formación hiper-especializada en estrategias de marketing digital, análisis profundo de datos, SEO, SEM, visualización de métricas y optimización de conversiones para liderar proyectos digitales escalables.</p>
+                    </div>
 
-.logo {
-    font-size: 2.8rem;
-    font-weight: 800;
-    color: var(--text-main);
-    letter-spacing: -1px;
-}
-.logo span {
-    color: var(--primary);
-}
+                    <div class="edu-item">
+                        <div class="edu-year">2021 - 2025</div>
+                        <h3>Grado en Gestión de Información y Contenidos Digitales</h3>
+                        <h4>Universidad de Murcia</h4>
+                        <p>Diseño y gestión de sistemas de información, desarrollo de productos digitales, comunicación en redes y tratamiento masivo de datos (Big Data Básico).</p>
+                    </div>
 
-.nav-links {
-    display: flex;
-    gap: 3rem;
-}
-.nav-links a {
-    font-size: 1.6rem;
-    font-weight: 500;
-    color: var(--text-light);
-    transition: 0.3s ease;
-}
-.nav-links a:hover {
-    color: var(--primary);
-}
+                    <div class="edu-item">
+                        <div class="edu-year">2024 - 2025</div>
+                        <h3>Especialización Python & Django</h3>
+                        <h4>Amd Formación - Udemy</h4>
+                        <p>190 horas de programación intensiva: fundamentos, estructuras de datos, creación de APIs y despliegue de aplicaciones web completas.</p>
+                    </div>
+                </div>
+            </div>
+        </article>
 
-.nav-actions {
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-}
+        <!-- 4. BLOQUE EXPERIENCIA (Expandible - Diseño Diferente) -->
+        <article class="bento-card expandable exp-card" id="experience">
+            <button class="close-btn"><i class="fas fa-times"></i></button>
+            <div class="collapsed-content">
+                <div class="card-header">
+                    <h2>Experiencia</h2>
+                    <div class="icon-indicator"><i class="fas fa-expand-alt"></i></div>
+                </div>
+                <div class="exp-preview">
+                    <span>CTCON</span> • <span>Novarum</span> • <span>AMC</span>
+                </div>
+            </div>
 
-#menu-toggle {
-    font-size: 2.5rem;
-    color: var(--text-main);
-    cursor: pointer;
-    display: none;
-}
+            <div class="expanded-content">
+                <h2 class="expanded-title">Trayectoria Profesional</h2>
+                
+                <!-- Layout tipo Grid de Impacto para Experiencia -->
+                <div class="exp-impact-grid">
+                    <div class="impact-card">
+                        <span class="exp-date">2025 - Actualidad</span>
+                        <h3>Back-End & Comm. Manager</h3>
+                        <div class="company-tag">CTCON</div>
+                        <p>Gestión de web institucional, creación de contenidos digitales, vigilancia tecnológica para innovación y posicionamiento SEO avanzado. Análisis de métricas para toma de decisiones.</p>
+                    </div>
 
-/* Botón Like */
-.btn-like {
-    background: #fee2e2;
-    color: #ef4444;
-    border: none;
-    padding: 0.8rem 2rem;
-    border-radius: 30px;
-    font-size: 1.5rem;
-    font-weight: 600;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    transition: 0.3s ease;
-}
-.btn-like:hover {
-    background: #ef4444;
-    color: white;
-    box-shadow: 0 4px 15px rgba(239, 68, 68, 0.3);
-}
+                    <div class="impact-card">
+                        <span class="exp-date">2024 - Actualidad</span>
+                        <h3>Front-End Developer</h3>
+                        <div class="company-tag">Curti Oliva & Novarum</div>
+                        <p>Creación, desarrollo y mantenimiento de e-commerce y webs corporativas. Responsable de la UI/UX y la gestión integral de comunidades digitales.</p>
+                    </div>
 
-/* ================= TITULOS DE SECCIÓN ================= */
-.section-title {
-    text-align: center;
-    margin-bottom: 6rem;
-}
-.section-title h2 {
-    font-size: 4rem;
-    font-weight: 800;
-}
-.section-title h2 span {
-    background: var(--gradient);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-.section-title p {
-    font-size: 1.6rem;
-    color: var(--text-light);
-    margin-top: 1rem;
-}
+                    <div class="impact-card">
+                        <span class="exp-date">2014 - 2021</span>
+                        <h3>Responsable de Logística</h3>
+                        <div class="company-tag">AMC</div>
+                        <p>Gestión de inventarios, optimización de bases de datos internas y coordinación integral de la cadena de suministro y trazabilidad de productos.</p>
+                    </div>
+                </div>
+            </div>
+        </article>
 
-/* ================= HERO SECTION ================= */
-.hero {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-    gap: 5rem;
-    padding-top: 15rem; /* Compensa el nav fijo */
-}
+        <!-- 5. BLOQUE SKILLS (Expandible) -->
+        <article class="bento-card expandable skills-card">
+            <button class="close-btn"><i class="fas fa-times"></i></button>
+            <div class="collapsed-content">
+                <h2>Stack Técnico</h2>
+                <div class="skills-mini">
+                    <span class="sk-pill">Python</span>
+                    <span class="sk-pill">SEO</span>
+                    <span class="sk-pill">WP</span>
+                    <span class="sk-pill">+</span>
+                </div>
+            </div>
+            
+            <div class="expanded-content">
+                <h2 class="expanded-title">Habilidades y Tecnologías</h2>
+                <div class="skills-grid-modern">
+                    <div class="skill-group">
+                        <h3>Data & Backend</h3>
+                        <div class="progress-modern"><div class="progress-bar" style="width: 75%;"><span>Python / Pandas / NumPy</span></div></div>
+                        <div class="progress-modern"><div class="progress-bar" style="width: 60%;"><span>MySQL / PHP / Django</span></div></div>
+                    </div>
+                    <div class="skill-group">
+                        <h3>Marketing & Analytics</h3>
+                        <div class="progress-modern"><div class="progress-bar" style="width: 85%;"><span>SEO / Analítica Web</span></div></div>
+                        <div class="progress-modern"><div class="progress-bar" style="width: 80%;"><span>WordPress / CMS</span></div></div>
+                    </div>
+                    <div class="skill-group">
+                        <h3>Front-End</h3>
+                        <div class="progress-modern"><div class="progress-bar" style="width: 70%;"><span>HTML5 / CSS3 / JS</span></div></div>
+                        <div class="progress-modern"><div class="progress-bar" style="width: 65%;"><span>Diseño UI / UX Responsive</span></div></div>
+                    </div>
+                </div>
+            </div>
+        </article>
 
-.hero-content .badge {
-    display: inline-block;
-    padding: 0.8rem 1.5rem;
-    background: #e0e7ff;
-    color: var(--primary);
-    border-radius: 30px;
-    font-size: 1.4rem;
-    font-weight: 600;
-    margin-bottom: 2rem;
-}
+        <!-- 6. BLOQUE PROYECTOS (Expandible) -->
+        <article class="bento-card expandable projects-card" id="projects">
+            <button class="close-btn"><i class="fas fa-times"></i></button>
+            <div class="collapsed-content">
+                <h2>Proyectos</h2>
+                <p>Curti Oliva, Titanic, Novarum...</p>
+            </div>
 
-.hero-content h1 {
-    font-size: 5.5rem;
-    line-height: 1.1;
-    font-weight: 800;
-    margin-bottom: 2rem;
-}
-.hero-content h1 span {
-    background: var(--gradient);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
+            <div class="expanded-content">
+                <h2 class="expanded-title">Portfolio Destacado</h2>
+                <div class="projects-masonry">
+                    
+                    <a href="https://github.com/Funkillo/Titanic_Proyecto" target="_blank" class="proj-item">
+                        <div class="proj-img"><img src="titanic_preview.png" alt="Titanic" onerror="this.src='https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=500&q=80'"></div>
+                        <div class="proj-info">
+                            <h4>Titanic Data Analysis</h4>
+                            <span>Python, Pandas</span>
+                        </div>
+                    </a>
 
-.hero-content p {
-    font-size: 1.8rem;
-    color: var(--text-light);
-    line-height: 1.6;
-    margin-bottom: 3rem;
-}
+                    <a href="https://www.curtioliva.es" target="_blank" class="proj-item">
+                        <div class="proj-img"><img src="curtioliva.jpg.png" alt="Curti Oliva" onerror="this.src='https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=500&q=80'"></div>
+                        <div class="proj-info">
+                            <h4>Curti Oliva</h4>
+                            <span>Desarrollo Web & SEO</span>
+                        </div>
+                    </a>
 
-.hero-buttons {
-    display: flex;
-    align-items: center;
-    gap: 3rem;
-}
+                    <a href="https://ctcon-rm.com/es/" target="_blank" class="proj-item">
+                        <div class="proj-img"><img src="ctcon..png" alt="CTCON" onerror="this.src='https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=500&q=80'"></div>
+                        <div class="proj-info">
+                            <h4>CTCON Web</h4>
+                            <span>Gestión CMS</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </article>
 
-.btn-primary {
-    background: var(--gradient);
-    color: white;
-    padding: 1.2rem 3rem;
-    border-radius: 30px;
-    font-size: 1.6rem;
-    font-weight: 600;
-    transition: 0.3s ease;
-    box-shadow: var(--shadow-md);
-}
-.btn-primary:hover {
-    transform: translateY(-3px);
-    box-shadow: var(--shadow-hover);
-}
+    </main>
 
-.social-icons a {
-    font-size: 2.2rem;
-    color: var(--text-main);
-    margin-right: 1.5rem;
-    transition: 0.3s ease;
-}
-.social-icons a:hover {
-    color: var(--primary);
-    transform: translateY(-3px);
-}
+    <!-- Barra de Navegación Móvil Inferior (Estilo App) -->
+    <nav class="bottom-nav">
+        <a href="#home" class="nav-item active"><i class="fas fa-user"></i><span>Perfil</span></a>
+        <a href="#education" class="nav-item"><i class="fas fa-book"></i><span>Estudios</span></a>
+        
+        <!-- Botón Especial de Like en el centro de la App Bar -->
+        <button id="likebtn" class="nav-like">
+            <i class="fas fa-heart"></i>
+            <span id="like-count">1436</span>
+        </button>
+        
+        <a href="#experience" class="nav-item"><i class="fas fa-bolt"></i><span>Exp</span></a>
+        <a href="#projects" class="nav-item"><i class="fas fa-layer-group"></i><span>Proyectos</span></a>
+    </nav>
 
-/* Imagen Blob Animada */
-.hero-image {
-    display: flex;
-    justify-content: center;
-}
-.blob-image {
-    width: 400px;
-    height: 400px;
-    border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
-    overflow: hidden;
-    box-shadow: var(--shadow-md);
-    animation: morph 8s ease-in-out infinite;
-    border: 5px solid white;
-}
-.blob-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-@keyframes morph {
-    0%, 100% { border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%; }
-    34% { border-radius: 70% 30% 50% 50% / 30% 30% 70% 70%; }
-    67% { border-radius: 100% 60% 60% 100% / 100% 100% 60% 60%; }
-}
+    <!-- JS Scripts -->
+    <script>
+        // Lógica de EXPANSION MODAL TIPO BENTO BOX (2026 Trend)
+        const cards = document.querySelectorAll('.expandable');
+        const overlay = document.getElementById('overlay');
+        let activeCard = null;
 
-/* ================= ABOUT & SKILLS (NUEVO) ================= */
-.about-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-}
-.bio-card, .skills-card {
-    background: var(--surface-color);
-    padding: 4rem;
-    border-radius: var(--border-radius);
-    box-shadow: var(--shadow-sm);
-}
-.bio-card h3, .skills-card h3 {
-    font-size: 2.4rem;
-    margin-bottom: 2rem;
-    color: var(--text-main);
-}
-.bio-card p {
-    font-size: 1.6rem;
-    color: var(--text-light);
-    line-height: 1.7;
-    margin-bottom: 3rem;
-}
-.info-list li {
-    font-size: 1.6rem;
-    margin-bottom: 1.5rem;
-    color: var(--text-main);
-    display: flex;
-    align-items: center;
-    gap: 1.5rem;
-}
-.info-list i {
-    color: var(--primary);
-    font-size: 2rem;
-}
-.btn-secondary {
-    display: inline-block;
-    margin-top: 2rem;
-    padding: 1rem 2.5rem;
-    border: 2px solid var(--primary);
-    color: var(--primary);
-    border-radius: 30px;
-    font-size: 1.5rem;
-    font-weight: 600;
-    transition: 0.3s;
-}
-.btn-secondary:hover {
-    background: var(--primary);
-    color: white;
-}
+        // Función para abrir la tarjeta
+        cards.forEach(card => {
+            card.addEventListener('click', function(e) {
+                // Si ya está expandida o se hace clic en el botón de cerrar, ignorar
+                if (this.classList.contains('expanded') || e.target.closest('.close-btn') || e.target.closest('a')) return;
+                
+                // Cerrar cualquier tarjeta activa previa
+                if (activeCard) {
+                    activeCard.classList.remove('expanded');
+                }
+                
+                // Expandir la actual
+                this.classList.add('expanded');
+                overlay.classList.add('active');
+                activeCard = this;
+                
+                // Bloquear scroll de fondo en móvil
+                document.body.style.overflow = 'hidden';
+            });
+        });
 
-/* Tarjetas de Habilidades (Tags) */
-.skill-category {
-    margin-bottom: 3rem;
-}
-.skill-category h4 {
-    font-size: 1.8rem;
-    margin-bottom: 1.5rem;
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-}
-.skill-category h4 i {
-    color: var(--primary);
-}
-.tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-}
-.tags span {
-    background: #f1f5f9;
-    color: var(--text-main);
-    padding: 0.8rem 1.5rem;
-    border-radius: 8px;
-    font-size: 1.4rem;
-    font-weight: 500;
-    transition: 0.3s;
-}
-.tags span:hover {
-    background: var(--primary);
-    color: white;
-    transform: translateY(-2px);
-}
+        // Función para cerrar la tarjeta (Botón X)
+        document.querySelectorAll('.close-btn').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.stopPropagation(); // Evitar que dispare el click de abrir
+                if (activeCard) activeCard.classList.remove('expanded');
+                overlay.classList.remove('active');
+                document.body.style.overflow = 'auto';
+                activeCard = null;
+            });
+        });
 
-/* ================= TIMELINE (TRAYECTORIA) ================= */
-.timeline {
-    position: relative;
-    max-width: 80rem;
-    margin: 0 auto;
-}
-.timeline::before {
-    content: '';
-    position: absolute;
-    left: 20px;
-    top: 0;
-    bottom: 0;
-    width: 2px;
-    background: #e2e8f0;
-}
-.timeline-item {
-    position: relative;
-    padding-left: 6rem;
-    margin-bottom: 4rem;
-}
-.timeline-dot {
-    position: absolute;
-    left: 11px;
-    top: 5px;
-    width: 20px;
-    height: 20px;
-    background: var(--bg-color);
-    border: 4px solid var(--primary);
-    border-radius: 50%;
-}
-.timeline-dot.highlight {
-    background: var(--secondary);
-    border-color: var(--primary);
-    box-shadow: 0 0 15px var(--secondary);
-}
-.timeline-content {
-    background: var(--surface-color);
-    padding: 3rem;
-    border-radius: var(--border-radius);
-    box-shadow: var(--shadow-sm);
-    transition: 0.3s;
-}
-.timeline-content:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-md);
-}
-.timeline-content.highlight-content {
-    border-left: 4px solid var(--primary);
-}
-.timeline-content .date {
-    display: inline-block;
-    padding: 0.5rem 1rem;
-    background: #f1f5f9;
-    color: var(--primary);
-    border-radius: 5px;
-    font-size: 1.3rem;
-    font-weight: 600;
-    margin-bottom: 1rem;
-}
-.timeline-content h3 {
-    font-size: 2rem;
-    margin-bottom: 0.5rem;
-}
-.timeline-content h4 {
-    font-size: 1.5rem;
-    color: var(--text-light);
-    margin-bottom: 1.5rem;
-    font-weight: 500;
-}
-.timeline-content p {
-    font-size: 1.5rem;
-    color: var(--text-light);
-    line-height: 1.6;
-}
+        // Cerrar al tocar el fondo oscuro
+        overlay.addEventListener('click', () => {
+            if (activeCard) activeCard.classList.remove('expanded');
+            overlay.classList.remove('active');
+            document.body.style.overflow = 'auto';
+            activeCard = null;
+        });
 
-/* ================= PORTFOLIO (NUEVO GRID) ================= */
-.portfolio-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-    gap: 3rem;
-}
-.portfolio-card {
-    background: var(--surface-color);
-    border-radius: var(--border-radius);
-    overflow: hidden;
-    box-shadow: var(--shadow-sm);
-    transition: 0.3s;
-}
-.portfolio-card:hover {
-    transform: translateY(-10px);
-    box-shadow: var(--shadow-hover);
-}
-.card-img {
-    width: 100%;
-    height: 220px;
-    overflow: hidden;
-}
-.card-img img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: 0.5s;
-}
-.portfolio-card:hover .card-img img {
-    transform: scale(1.1);
-}
-.card-info {
-    padding: 2.5rem;
-    position: relative;
-}
-.card-info .category {
-    font-size: 1.3rem;
-    color: var(--primary);
-    font-weight: 600;
-    text-transform: uppercase;
-}
-.card-info h3 {
-    font-size: 2rem;
-    margin-top: 1rem;
-    color: var(--text-main);
-}
-.card-link {
-    position: absolute;
-    right: 2.5rem;
-    bottom: 2.5rem;
-    width: 4rem;
-    height: 4rem;
-    background: #f1f5f9;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: var(--text-main);
-    font-size: 1.8rem;
-    transition: 0.3s;
-}
-.portfolio-card:hover .card-link {
-    background: var(--primary);
-    color: white;
-}
+        // Sistema Epic Like
+        const likeBtn = document.getElementById('likebtn');
+        const likeCount = document.getElementById('like-count');
+        let likes = 1436;
 
-/* ================= CONTACTO Y FOOTER ================= */
-.contact-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-    gap: 3rem;
-}
-.contact-box {
-    background: var(--surface-color);
-    padding: 4rem 2rem;
-    border-radius: var(--border-radius);
-    text-align: center;
-    box-shadow: var(--shadow-sm);
-    transition: 0.3s;
-}
-.contact-box:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-md);
-}
-.contact-box i {
-    font-size: 4rem;
-    color: var(--primary);
-    margin-bottom: 2rem;
-}
-.contact-box h3 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-}
-.contact-box p {
-    font-size: 1.6rem;
-    color: var(--text-light);
-}
+        likeBtn.addEventListener('click', (e) => {
+            e.stopPropagation(); // Evitar comportamientos raros
+            likes++;
+            likeCount.textContent = likes;
+            
+            // Animación de pulso
+            likeBtn.style.transform = 'scale(1.2) translateY(-15px)';
+            likeBtn.style.background = '#ef4444';
+            likeBtn.style.color = '#fff';
+            
+            setTimeout(() => {
+                likeBtn.style.transform = 'scale(1) translateY(-10px)';
+            }, 200);
+        });
 
-footer {
-    text-align: center;
-    padding: 3rem;
-    background: var(--surface-color);
-    color: var(--text-light);
-    font-size: 1.5rem;
-    margin-top: 5rem;
-}
-
-/* ================= MEDIA QUERIES (RESPONSIVE) ================= */
-@media (max-width: 991px) {
-    html { font-size: 55%; }
-    .hero { grid-template-columns: 1fr; text-align: center; }
-    .hero-buttons { justify-content: center; }
-    .about-grid { grid-template-columns: 1fr; }
-    .nav-links {
-        position: absolute;
-        top: 100%; left: 0; right: 0;
-        background: rgba(255, 255, 255, 0.95);
-        flex-direction: column;
-        padding: 2rem;
-        box-shadow: var(--shadow-md);
-        display: none;
-    }
-    .nav-links.active { display: flex; }
-    #menu-toggle { display: block; }
-}
-
-@media (max-width: 600px) {
-    html { font-size: 50%; }
-    .blob-image { width: 300px; height: 300px; }
-    .hero-content h1 { font-size: 4rem; }
-    .timeline::before { left: 10px; }
-    .timeline-dot { left: 1px; }
-    .timeline-item { padding-left: 4rem; }
-}
+        // Navegación Activa
+        const navItems = document.querySelectorAll('.nav-item');
+        navItems.forEach(item => {
+            item.addEventListener('click', function() {
+                navItems.forEach(nav => nav.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>

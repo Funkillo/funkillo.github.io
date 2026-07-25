@@ -4,1147 +4,342 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Juan Antonio Sánchez | Marketing Digital & Analítica</title>
+    <title>Portfolio | Juan Antonio Sánchez Marín</title>
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Google Fonts: Poppins para un toque más moderno -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- AOS CSS -->
+
+    <!-- AOS CSS (Animaciones) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
 
-    <style>
-        :root {
-            --bg-dark: #050505;
-            --bg-surface: #121212;
-            --bg-glass: rgba(255, 255, 255, 0.03);
-            --primary: #00ffcc; /* Cyan Tech */
-            --secondary: #7000ff; /* Purple Marketing */
-            --accent: #ff0055;
-            --text-main: #ffffff;
-            --text-muted: #a0a0a0;
-            --border-glass: rgba(255, 255, 255, 0.08);
-            --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Outfit', sans-serif;
-            text-decoration: none;
-            list-style: none;
-            color: var(--text-main);
-        }
-
-        html {
-            font-size: 62.5%;
-            scroll-behavior: smooth;
-        }
-
-        body {
-            background-color: var(--bg-dark);
-            background-image: 
-                radial-gradient(at 0% 0%, rgba(112, 0, 255, 0.15) 0px, transparent 50%),
-                radial-gradient(at 100% 100%, rgba(0, 255, 204, 0.1) 0px, transparent 50%);
-            background-attachment: fixed;
-            display: flex;
-            overflow-x: hidden;
-        }
-
-        /* Scrollbar */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-        ::-webkit-scrollbar-track {
-            background: var(--bg-dark);
-        }
-        ::-webkit-scrollbar-thumb {
-            background: var(--secondary);
-            border-radius: 10px;
-        }
-
-        /* Tipografía */
-        h1, h2, h3 {
-            font-family: 'Space Grotesk', sans-serif;
-        }
-        
-        .section-title {
-            font-size: 4.5rem;
-            text-transform: uppercase;
-            margin-bottom: 4rem;
-            text-align: center;
-            background: linear-gradient(90deg, var(--primary), var(--secondary));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: 700;
-            letter-spacing: 2px;
-        }
-
-        /* Botones */
-        .btn {
-            display: inline-block;
-            padding: 1.2rem 3rem;
-            background: rgba(255,255,255,0.05);
-            border: 1px solid var(--primary);
-            color: var(--primary);
-            font-size: 1.6rem;
-            border-radius: 30px;
-            cursor: pointer;
-            transition: var(--transition);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            font-weight: 600;
-            backdrop-filter: blur(5px);
-        }
-
-        .btn:hover {
-            background: var(--primary);
-            color: var(--bg-dark);
-            box-shadow: 0 0 20px rgba(0, 255, 204, 0.4);
-            transform: translateY(-3px);
-        }
-
-        /* Sidebar / Header */
-        .sidebar {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 280px;
-            height: 100vh;
-            background: rgba(18, 18, 18, 0.8);
-            backdrop-filter: blur(20px);
-            border-right: 1px solid var(--border-glass);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 4rem 2rem;
-            z-index: 1000;
-            transition: var(--transition);
-        }
-
-        .sidebar-profile {
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-
-        .sidebar-profile img {
-            width: 140px;
-            height: 140px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 3px solid transparent;
-            background: linear-gradient(var(--bg-surface), var(--bg-surface)) padding-box,
-                        linear-gradient(45deg, var(--primary), var(--secondary)) border-box;
-            margin-bottom: 1.5rem;
-            transition: var(--transition);
-        }
-
-        .sidebar-profile img:hover {
-            transform: scale(1.05) rotate(5deg);
-        }
-
-        .sidebar-profile h2 {
-            font-size: 2.2rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .sidebar-profile p {
-            font-size: 1.3rem;
-            color: var(--text-muted);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .nav-menu {
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-        }
-
-        .nav-menu a {
-            font-size: 1.6rem;
-            padding: 1.2rem 2rem;
-            border-radius: 10px;
-            transition: var(--transition);
-            display: flex;
-            align-items: center;
-            gap: 1.5rem;
-            color: var(--text-muted);
-        }
-
-        .nav-menu a i {
-            font-size: 1.8rem;
-        }
-
-        .nav-menu a:hover, .nav-menu a.active {
-            background: var(--bg-glass);
-            color: var(--primary);
-            border-left: 3px solid var(--primary);
-        }
-
-        .likes-container {
-            margin-top: auto;
-            text-align: center;
-            width: 100%;
-        }
-
-        .like-btn {
-            background: rgba(255, 0, 85, 0.1);
-            border: 1px solid var(--accent);
-            color: var(--accent);
-            padding: 1rem 2rem;
-            border-radius: 20px;
-            font-size: 1.4rem;
-            cursor: pointer;
-            transition: var(--transition);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 1rem;
-            width: 100%;
-        }
-
-        .like-btn:hover {
-            background: var(--accent);
-            color: #fff;
-            box-shadow: 0 0 15px rgba(255, 0, 85, 0.5);
-        }
-
-        .social-links {
-            display: flex;
-            gap: 1.5rem;
-            margin-top: 2rem;
-        }
-
-        .social-links a {
-            font-size: 2rem;
-            color: var(--text-muted);
-            transition: var(--transition);
-        }
-
-        .social-links a:hover {
-            color: var(--primary);
-            transform: translateY(-3px);
-        }
-
-        #menu-toggle {
-            display: none;
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            z-index: 1001;
-            background: var(--bg-surface);
-            border: 1px solid var(--primary);
-            color: var(--primary);
-            font-size: 2.5rem;
-            padding: 1rem;
-            border-radius: 10px;
-            cursor: pointer;
-        }
-
-        /* Contenido Principal */
-        .main-content {
-            margin-left: 280px;
-            width: calc(100% - 280px);
-            padding: 4rem 8%;
-        }
-
-        section {
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            padding: 6rem 0;
-            border-bottom: 1px solid var(--border-glass);
-        }
-
-        /* Home Section */
-        .home {
-            flex-direction: row;
-            align-items: center;
-            justify-content: space-between;
-            gap: 5rem;
-        }
-
-        .home-content {
-            flex: 1;
-        }
-
-        .home-content h1 {
-            font-size: 6rem;
-            line-height: 1.1;
-            margin-bottom: 2rem;
-        }
-
-        .home-content h1 span {
-            color: var(--primary);
-        }
-
-        .home-content .subtitle {
-            font-size: 2.4rem;
-            color: var(--secondary);
-            margin-bottom: 2rem;
-            display: block;
-            font-weight: 600;
-        }
-
-        .home-content p {
-            font-size: 1.8rem;
-            color: var(--text-muted);
-            line-height: 1.8;
-            margin-bottom: 3rem;
-            max-width: 600px;
-        }
-
-        .home-image {
-            flex: 1;
-            display: flex;
-            justify-content: center;
-            position: relative;
-        }
-
-        .home-image::before {
-            content: '';
-            position: absolute;
-            width: 350px;
-            height: 350px;
-            background: var(--secondary);
-            border-radius: 50%;
-            filter: blur(100px);
-            opacity: 0.3;
-            z-index: -1;
-        }
-
-        .home-image img {
-            width: 100%;
-            max-width: 400px;
-            border-radius: 20px;
-            border: 1px solid var(--border-glass);
-            box-shadow: 20px 20px 0px rgba(0, 255, 204, 0.2);
-        }
-
-        /* About & Skills */
-        .about-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            background: var(--bg-glass);
-            padding: 4rem;
-            border-radius: 20px;
-            border: 1px solid var(--border-glass);
-            backdrop-filter: blur(10px);
-        }
-
-        .bio-text {
-            font-size: 1.7rem;
-            color: var(--text-muted);
-            line-height: 1.8;
-            margin-bottom: 3rem;
-        }
-
-        .info-list li {
-            font-size: 1.6rem;
-            margin-bottom: 1.5rem;
-            display: flex;
-            gap: 1rem;
-        }
-
-        .info-list li span {
-            color: var(--primary);
-            font-weight: 600;
-            width: 100px;
-        }
-
-        .skills-container {
-            display: flex;
-            flex-direction: column;
-            gap: 2rem;
-        }
-
-        .skill-item h3 {
-            font-size: 1.6rem;
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 0.5rem;
-        }
-
-        .skill-item h3 span:last-child {
-            color: var(--primary);
-        }
-
-        .skill-bar {
-            width: 100%;
-            height: 8px;
-            background: rgba(255,255,255,0.1);
-            border-radius: 10px;
-            overflow: hidden;
-            position: relative;
-        }
-
-        .skill-progress {
-            height: 100%;
-            background: linear-gradient(90deg, var(--secondary), var(--primary));
-            border-radius: 10px;
-            position: relative;
-        }
-        
-        .skill-progress::after {
-            content: '';
-            position: absolute;
-            top: 0; right: 0; bottom: 0; left: 0;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
-            animation: shimmer 2s infinite;
-        }
-
-        @keyframes shimmer {
-            0% { transform: translateX(-100%); }
-            100% { transform: translateX(100%); }
-        }
-
-        .skill-tags {
-            font-size: 1.2rem;
-            color: var(--text-muted);
-            margin-top: 0.5rem;
-        }
-
-        /* Timeline (Education & Experience) */
-        .timeline-wrapper {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            margin-top: 5rem;
-        }
-
-        .timeline-col h3.col-title {
-            font-size: 2.5rem;
-            margin-bottom: 3rem;
-            color: var(--primary);
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-        }
-
-        .timeline-box {
-            position: relative;
-            padding-left: 3rem;
-            margin-bottom: 3rem;
-            border-left: 2px solid var(--border-glass);
-        }
-
-        .timeline-box::before {
-            content: '';
-            position: absolute;
-            left: -9px;
-            top: 0;
-            width: 16px;
-            height: 16px;
-            background: var(--bg-dark);
-            border: 2px solid var(--secondary);
-            border-radius: 50%;
-            transition: var(--transition);
-        }
-
-        .timeline-box:hover::before {
-            background: var(--secondary);
-            box-shadow: 0 0 10px var(--secondary);
-        }
-
-        .timeline-box .year {
-            font-size: 1.4rem;
-            color: var(--primary);
-            font-weight: 600;
-            margin-bottom: 1rem;
-            display: block;
-        }
-
-        .timeline-box h4 {
-            font-size: 2rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .timeline-box p {
-            font-size: 1.5rem;
-            color: var(--text-muted);
-            line-height: 1.6;
-        }
-
-        /* Services */
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 3rem;
-        }
-
-        .service-card {
-            background: var(--bg-glass);
-            border: 1px solid var(--border-glass);
-            padding: 4rem 3rem;
-            border-radius: 20px;
-            text-align: center;
-            transition: var(--transition);
-            backdrop-filter: blur(5px);
-        }
-
-        .service-card:hover {
-            transform: translateY(-10px);
-            border-color: var(--primary);
-            box-shadow: 0 10px 30px rgba(0, 255, 204, 0.1);
-        }
-
-        .service-card i {
-            font-size: 4rem;
-            color: var(--primary);
-            margin-bottom: 2rem;
-            transition: var(--transition);
-        }
-
-        .service-card:hover i {
-            color: var(--secondary);
-            transform: scale(1.1);
-        }
-
-        .service-card h3 {
-            font-size: 2.2rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .service-card p {
-            font-size: 1.6rem;
-            color: var(--text-muted);
-            line-height: 1.6;
-        }
-
-        /* Portfolio */
-        .portfolio-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 3rem;
-        }
-
-        .portfolio-item {
-            position: relative;
-            border-radius: 15px;
-            overflow: hidden;
-            cursor: pointer;
-            border: 1px solid var(--border-glass);
-        }
-
-        .portfolio-item img {
-            width: 100%;
-            height: 250px;
-            object-fit: cover;
-            transition: transform 0.5s ease;
-        }
-
-        .portfolio-overlay {
-            position: absolute;
-            top: 0; left: 0; width: 100%; height: 100%;
-            background: linear-gradient(to top, rgba(5,5,5,0.9), rgba(5,5,5,0.2));
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-end;
-            padding: 3rem;
-            opacity: 0;
-            transition: var(--transition);
-        }
-
-        .portfolio-item:hover img {
-            transform: scale(1.1);
-            filter: grayscale(80%) blur(2px);
-        }
-
-        .portfolio-item:hover .portfolio-overlay {
-            opacity: 1;
-        }
-
-        .portfolio-overlay h3 {
-            font-size: 2.2rem;
-            color: var(--primary);
-            margin-bottom: 0.5rem;
-            transform: translateY(20px);
-            transition: var(--transition);
-        }
-
-        .portfolio-overlay span {
-            font-size: 1.4rem;
-            color: #fff;
-            transform: translateY(20px);
-            transition: var(--transition);
-            transition-delay: 0.1s;
-        }
-
-        .portfolio-item:hover .portfolio-overlay h3,
-        .portfolio-item:hover .portfolio-overlay span {
-            transform: translateY(0);
-        }
-
-        /* Contacto */
-        .contact-container {
-            display: grid;
-            grid-template-columns: 1fr 2fr;
-            gap: 4rem;
-        }
-
-        .contact-info .info-box {
-            background: var(--bg-glass);
-            padding: 3rem;
-            border-radius: 15px;
-            margin-bottom: 2rem;
-            border: 1px solid var(--border-glass);
-            display: flex;
-            align-items: center;
-            gap: 2rem;
-            transition: var(--transition);
-        }
-
-        .contact-info .info-box:hover {
-            border-color: var(--secondary);
-            transform: translateX(10px);
-        }
-
-        .info-box i {
-            font-size: 3rem;
-            color: var(--primary);
-        }
-
-        .info-box h3 {
-            font-size: 1.8rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .info-box p {
-            font-size: 1.5rem;
-            color: var(--text-muted);
-        }
-
-        .contact-form {
-            background: var(--bg-glass);
-            padding: 4rem;
-            border-radius: 20px;
-            border: 1px solid var(--border-glass);
-        }
-
-        .input-group {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2rem;
-            margin-bottom: 2rem;
-        }
-
-        .contact-form input, .contact-form textarea {
-            width: 100%;
-            padding: 1.5rem;
-            background: rgba(0,0,0,0.5);
-            border: 1px solid var(--border-glass);
-            border-radius: 10px;
-            color: #fff;
-            font-size: 1.6rem;
-            outline: none;
-            transition: var(--transition);
-        }
-
-        .contact-form textarea {
-            height: 150px;
-            resize: none;
-            margin-bottom: 2rem;
-        }
-
-        .contact-form input:focus, .contact-form textarea:focus {
-            border-color: var(--primary);
-            box-shadow: 0 0 10px rgba(0, 255, 204, 0.2);
-        }
-
-        footer {
-            text-align: center;
-            padding: 3rem;
-            background: #000;
-            font-size: 1.5rem;
-            color: var(--text-muted);
-            border-top: 1px solid var(--border-glass);
-        }
-
-        footer span {
-            color: var(--primary);
-        }
-
-        /* Modal / Lightbox (Diseño Opaco Avanzado) */
-        .modal {
-            display: none;
-            position: fixed;
-            top: 0; left: 0; width: 100%; height: 100%;
-            background: rgba(0, 0, 0, 0.95);
-            backdrop-filter: blur(10px);
-            z-index: 2000;
-            justify-content: center;
-            align-items: center;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-
-        .modal.show {
-            display: flex;
-            opacity: 1;
-        }
-
-        .modal-content {
-            position: relative;
-            max-width: 900px;
-            width: 90%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            transform: scale(0.8);
-            transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-        }
-
-        .modal.show .modal-content {
-            transform: scale(1);
-        }
-
-        .modal-content img {
-            width: 100%;
-            max-height: 70vh;
-            object-fit: contain;
-            border-radius: 10px;
-            box-shadow: 0 0 30px rgba(0, 255, 204, 0.2);
-            border: 1px solid var(--border-glass);
-        }
-
-        .modal-info {
-            margin-top: 2rem;
-            text-align: center;
-        }
-
-        .modal-info h3 {
-            font-size: 3rem;
-            color: var(--primary);
-            margin-bottom: 1rem;
-        }
-
-        .modal-info p {
-            font-size: 1.6rem;
-            color: var(--text-muted);
-        }
-
-        .close-modal {
-            position: absolute;
-            top: -40px;
-            right: 0;
-            color: #fff;
-            font-size: 4rem;
-            cursor: pointer;
-            transition: var(--transition);
-        }
-
-        .close-modal:hover {
-            color: var(--accent);
-            transform: rotate(90deg);
-        }
-
-        /* Responsive */
-        @media (max-width: 991px) {
-            .sidebar {
-                transform: translateX(-100%);
-            }
-            .sidebar.active {
-                transform: translateX(0);
-            }
-            #menu-toggle {
-                display: block;
-            }
-            .main-content {
-                margin-left: 0;
-                width: 100%;
-                padding: 2rem 5%;
-            }
-            .home {
-                flex-direction: column-reverse;
-                text-align: center;
-                padding-top: 10rem;
-            }
-            .home-content p {
-                margin: 0 auto 3rem auto;
-            }
-            .about-grid, .timeline-wrapper, .contact-container, .input-group {
-                grid-template-columns: 1fr;
-            }
-            .section-title {
-                font-size: 3.5rem;
-            }
-        }
-    </style>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Botón Menú Móvil -->
-    <div id="menu-toggle" class="fas fa-bars"></div>
+<!-- Header Section -->
+<header class="header">
+    <div id="menu-btn" class="fas fa-bars"></div>
+    
+    <a href="#home" class="logo">Portfolio.</a>
+    
+    <!-- Botón de Like Épico -->
+    <button id="likebtn" class="glow-on-hover">
+        <i class="fas fa-heart"></i> <span id="like-count">1435</span>
+    </button>
 
-    <!-- Sidebar / Menú Lateral -->
-    <header class="sidebar" id="sidebar">
-        <div class="sidebar-profile">
-            <img src="fotomia.jpg" alt="Juan Antonio Sánchez Marín">
-            <h2>Juan Antonio</h2>
-            <p>Digital Marketing & Data</p>
-        </div>
+    <nav class="navbar">
+        <a href="#home" class="active">Inicio</a>
+        <a href="#about">Acerca de</a>
+        <a href="#services">Servicios</a>
+        <a href="#portfolio">Proyectos</a>
+        <a href="#contact">Contacto</a>
+    </nav>
+
+    <div class="follow">
+        <a href="https://twitter.com/FunkilloR" class="fab fa-twitter" target="_blank"></a>
+        <a href="https://www.instagram.com/jmarinn92/" class="fab fa-instagram" target="_blank"></a>
+        <a href="https://www.linkedin.com/in/juan-antonio-s%C3%A1nchez-mar%C3%ADn-024b79257/" class="fab fa-linkedin" target="_blank"></a>
+        <a href="https://github.com/Funkillo" class="fab fa-github" target="_blank"></a>
+    </div>
+</header>
+
+<!-- Home Section -->
+<section class="home" id="home">
+    <div class="image" data-aos="fade-right">
+        <!-- Asegúrate de tener tu foto en la misma carpeta o actualiza la ruta -->
+        <img src="fotomia.jpg" alt="Foto de Juan Antonio">
+    </div>
+    
+    <div class="content">
+        <h3 data-aos="fade-up">JUAN ANTONIO</h3>
+        <span data-aos="fade-up" class="subtitle-badge">Desarrollador Web & Analista Digital</span>
         
-        <nav class="nav-menu">
-            <a href="#home" class="active"><i class="fas fa-home"></i> Inicio</a>
-            <a href="#about"><i class="fas fa-user"></i> Acerca de</a>
-            <a href="#services"><i class="fas fa-server"></i> Servicios</a>
-            <a href="#portfolio"><i class="fas fa-briefcase"></i> Portfolio</a>
-            <a href="#contact"><i class="fas fa-envelope"></i> Contacto</a>
-        </nav>
+        <p data-aos="fade-up">
+            Creador digital con formación en Gestión de Información y Contenidos Digitales. 
+            Combino programación, diseño web y <strong>marketing digital analítico</strong> para desarrollar 
+            experiencias digitales épicas, funcionales y orientadas a resultados.
+        </p>
+        <a data-aos="fade-up" href="#portfolio" class="btn">Ver mis proyectos <i class="fas fa-arrow-right"></i></a>
+    </div>
+</section>
 
-        <div class="likes-container">
-            <button class="like-btn" id="likebtn">
-                <i class="fas fa-heart"></i> <span id="like-count">1239</span>
-            </button>
-            <div class="social-links">
-                <a href="https://twitter.com/FunkilloR" target="_blank"><i class="fab fa-twitter"></i></a>
-                <a href="https://www.instagram.com/jmarinn92/" target="_blank"><i class="fab fa-instagram"></i></a>
-                <a href="https://www.linkedin.com/in/juan-antonio-s%C3%A1nchez-mar%C3%ADn-024b79257/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                <a href="https://github.com/Funkillo" target="_blank"><i class="fab fa-github"></i></a>
-            </div>
+<!-- About Section -->
+<section class="about" id="about">
+    <h1 class="heading" data-aos="fade-up"> <span>Biografía</span> </h1>
+
+    <div class="biography">
+        <p data-aos="fade-up">"La programación, el diseño web y el análisis de datos son las herramientas perfectas para crear experiencias digitales que no solo impactan visualmente, sino que convierten."</p>
+
+        <div class="bio">
+            <h3 data-aos="zoom-in"> <span>Nombre : </span> Juan Antonio </h3>
+            <h3 data-aos="zoom-in"> <span>Email : </span> juanantonio.sanchezm@um.es</h3>
+            <h3 data-aos="zoom-in"> <span>Ubicación : </span> Murcia, España</h3>
+            <h3 data-aos="zoom-in"> <span>Edad : </span> 33 años </h3>
+            <h3 data-aos="zoom-in"> <span>Experiencia : </span> +2 años </h3>
         </div>
-    </header>
 
-    <!-- Contenido Principal -->
-    <main class="main-content">
-        
-        <!-- Home Section -->
-        <section class="home" id="home">
-            <div class="home-content" data-aos="fade-right">
-                <h1>Juan Antonio<br><span>Sánchez Marín</span></h1>
-                <span class="subtitle">Especialista en Marketing Analítico & Growth</span>
-                <p>Combino estrategias avanzadas de branding, desarrollo web y analítica de datos (Python, Modelos Predictivos) para escalar negocios. Transformo datos complejos en decisiones de marketing rentables, diseñando experiencias digitales que convierten visitantes en clientes fieles.</p>
-                <a href="#portfolio" class="btn">Ver Proyectos <i class="fas fa-arrow-right"></i></a>
-            </div>
-            <div class="home-image" data-aos="fade-left">
-                <!-- Efecto de sombra y cristal en CSS aplicado a la imagen -->
-                <img src="fotomia.jpg" alt="Juan Antonio Sánchez">
-            </div>
-        </section>
+        <a href="https://drive.google.com/file/d/14nNCoLJqllwpwbAbLhM00xUMhK6Wyele/view?usp=sharing" target="_blank" class="btn" data-aos="fade-up"><i class="fas fa-download"></i> Descargar CV</a>
+    </div>
 
-        <!-- About Section -->
-        <section class="about" id="about">
-            <h2 class="section-title" data-aos="fade-up">Biografía & Skills</h2>
-            
-            <div class="about-grid">
-                <div class="about-info" data-aos="fade-right">
-                    <p class="bio-text">La analítica de datos y el diseño estratégico son el motor del marketing moderno. Mi enfoque se basa en extraer KPIs clave y construir arquitecturas web optimizadas para el crecimiento (Growth Hacking) y posicionamiento SEO.</p>
-                    <ul class="info-list">
-                        <li><span>Nombre:</span> Juan Antonio Sánchez Marín</li>
-                        <li><span>Email:</span> juanantonio.sanchezm@um.es</li>
-                        <li><span>Ubicación:</span> Murcia, España</li>
-                        <li><span>Perfil:</span> Marketing Data-Driven & Frontend</li>
-                    </ul>
-                    <a href="https://drive.google.com/file/d/14nNCoLJqllwpwbAbLhM00xUMhK6Wyele/view?usp=sharing" target="_blank" class="btn" style="margin-top: 2rem;"><i class="fas fa-download"></i> Descargar CV</a>
-                </div>
-
-                <div class="skills-container" data-aos="fade-left">
-                    <div class="skill-item">
-                        <h3><span>Data Analytics & Python (Pandas, SEO Data)</span> <span>85%</span></h3>
-                        <div class="skill-bar"><div class="skill-progress" style="width: 85%;"></div></div>
-                        <div class="skill-tags">Modelos predictivos, variables, visualización de datos</div>
-                    </div>
-                    <div class="skill-item">
-                        <h3><span>Estrategia SEO & Branding Digital</span> <span>90%</span></h3>
-                        <div class="skill-bar"><div class="skill-progress" style="width: 90%;"></div></div>
-                        <div class="skill-tags">Keywords, Growth Hacking, Analítica Web</div>
-                    </div>
-                    <div class="skill-item">
-                        <h3><span>Desarrollo Frontend (HTML, CSS, JS)</span> <span>75%</span></h3>
-                        <div class="skill-bar"><div class="skill-progress" style="width: 75%;"></div></div>
-                        <div class="skill-tags">Arquitectura web, Accesibilidad, UX/UI</div>
-                    </div>
-                    <div class="skill-item">
-                        <h3><span>Gestión CMS & Bases de Datos (SQL, WP)</span> <span>80%</span></h3>
-                        <div class="skill-bar"><div class="skill-progress" style="width: 80%;"></div></div>
-                        <div class="skill-tags">Estructura relacional, integraciones, optimización</div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Educación y Experiencia -->
-            <div class="timeline-wrapper">
-                <div class="timeline-col" data-aos="fade-up">
-                    <h3 class="col-title"><i class="fas fa-graduation-cap"></i> Educación</h3>
-                    
-                    <div class="timeline-box">
-                        <span class="year">2025 - 2026</span>
-                        <h4>Máster en Marketing Digital y Analítico</h4>
-                        <p>Universidad de Murcia. Especialización en estrategias Data-Driven, analítica avanzada, SEO/SEM, gestión de campañas, branding estratégico y medición de retornos (ROI).</p>
-                    </div>
-                    
-                    <div class="timeline-box">
-                        <span class="year">2021 - 2025</span>
-                        <h4>Grado en Gestión de Información y Contenidos Digitales</h4>
-                        <p>Universidad de Murcia. Diseño y gestión de sistemas de información, economía digital, y asesoría legal en protección de datos corporativos.</p>
-                    </div>
-
-                    <div class="timeline-box">
-                        <span class="year">2024 - 2025</span>
-                        <h4>Programación Python Avanzada & Django</h4>
-                        <p>Amd Formación / Udemy. Bases de datos, modelos, estructuras analíticas y desarrollo backend.</p>
-                    </div>
-                </div>
-
-                <div class="timeline-col" data-aos="fade-up" data-aos-delay="200">
-                    <h3 class="col-title"><i class="fas fa-briefcase"></i> Experiencia</h3>
-                    
-                    <div class="timeline-box">
-                        <span class="year">2025 - Actualidad</span>
-                        <h4>Back-End Developer & Community Manager</h4>
-                        <p>CTCON. Gestión de plataforma institucional, vigilancia tecnológica, campañas informativas y posicionamiento SEO estratégico.</p>
-                    </div>
-                    
-                    <div class="timeline-box">
-                        <span class="year">2024 - Actualidad</span>
-                        <h4>Frontend Developer & Estratega Digital</h4>
-                        <p>Novarum & Curtioliva. Desarrollo web integral, mantenimiento técnico y diseño de estrategias en redes corporativas orientadas a conversión.</p>
-                    </div>
-
-                    <div class="timeline-box">
-                        <span class="year">2014 - 2021</span>
-                        <h4>Responsable de Logística y Bases de Datos</h4>
-                        <p>AMC. Control de inventarios mediante BBDD relacionales, supervisión analítica de stock y flujos de trabajo.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Services Section -->
-        <section class="services" id="services">
-            <h2 class="section-title" data-aos="fade-up">Servicios Estratégicos</h2>
-            <div class="services-grid">
-                
-                <div class="service-card" data-aos="zoom-in">
-                    <i class="fas fa-chart-line"></i>
-                    <h3>Marketing Analítico & SEO</h3>
-                    <p>Posicionamiento avanzado basado en análisis de métricas. Transformo Big Data en estrategias de Growth Hacking y visibilidad corporativa.</p>
-                </div>
-
-                <div class="service-card" data-aos="zoom-in" data-aos-delay="100">
-                    <i class="fas fa-bullseye"></i>
-                    <h3>Branding Estratégico</h3>
-                    <p>Construcción de marcas digitales sólidas. Desde la identidad visual hasta la comunicación en redes, asegurando impacto y retención.</p>
-                </div>
-
-                <div class="service-card" data-aos="zoom-in" data-aos-delay="200">
-                    <i class="fas fa-laptop-code"></i>
-                    <h3>Desarrollo Web (Front & CMS)</h3>
-                    <p>Creación de ecosistemas web rápidos y accesibles usando HTML5, CSS3, JS y optimización profunda en WordPress orientada a conversión.</p>
-                </div>
-
-                <div class="service-card" data-aos="zoom-in" data-aos-delay="300">
-                    <i class="fab fa-python"></i>
-                    <h3>Data Science & Python</h3>
-                    <p>Implementación de modelos analíticos, manipulación de variables con Pandas y visualización de datos estadísticos para inteligencia de negocio.</p>
-                </div>
-
-            </div>
-        </section>
-
-        <!-- Portfolio Section -->
-        <section class="portfolio" id="portfolio">
-            <h2 class="section-title" data-aos="fade-up">Proyectos & Analítica</h2>
-            <div class="portfolio-grid">
-                
-                <!-- Items de Portfolio con data attributes para el Lightbox -->
-                <div class="portfolio-item" data-aos="fade-up" onclick="openModal('titanic_preview.png', 'Modelado Analítico - Titanic', 'Análisis y Visualización de Datos con Python, pandas y NumPy. Creación de variables y modelos estadísticos predictivos.')">
-                    <img src="titanic_preview.png" alt="Proyecto Titanic">
-                    <div class="portfolio-overlay">
-                        <h3>Modelado Analítico</h3>
-                        <span>Python / Pandas / Data Science</span>
-                    </div>
-                </div>
-
-                <div class="portfolio-item" data-aos="fade-up" data-aos-delay="100" onclick="openModal('Novarum.es.png', 'Estrategia Web - Novarum', 'Desarrollo integral de frontend y arquitectura SEO para captación de leads en Novarum.es.')">
-                    <img src="Novarum.es.png" alt="Novarum">
-                    <div class="portfolio-overlay">
-                        <h3>Estrategia & Web Novarum</h3>
-                        <span>Frontend / Marketing Digital</span>
-                    </div>
-                </div>
-
-                <div class="portfolio-item" data-aos="fade-up" data-aos-delay="200" onclick="openModal('curtioliva.jpg.png', 'Branding & Web - Curtioliva', 'Diseño web corporativo, edición digital y estrategia de contenidos visuales para la marca Curtioliva.')">
-                    <img src="curtioliva.jpg.png" alt="Curtioliva">
-                    <div class="portfolio-overlay">
-                        <h3>Branding Curtioliva</h3>
-                        <span>UX/UI / Creación de Contenido</span>
-                    </div>
-                </div>
-
-                <div class="portfolio-item" data-aos="fade-up" data-aos-delay="300" onclick="openModal('ctcon..png', 'Gestión Digital CTCON', 'Desempeño como Community Manager, aplicando técnicas de SEO, métricas de engagement y gestión institucional.')">
-                    <img src="ctcon..png" alt="CTCON">
-                    <div class="portfolio-overlay">
-                        <h3>Comunicaciones CTCON</h3>
-                        <span>Social Media / SEO Técnico</span>
-                    </div>
-                </div>
-
-                <div class="portfolio-item" data-aos="fade-up" data-aos-delay="400" onclick="openModal('intro.jpg', 'Desarrollo Lógico - Stupikdo', 'Desarrollo de videojuego aplicando lógica de programación en Python estructurado. (2021-2022)')">
-                    <img src="intro.jpg" alt="Game Stupikdo">
-                    <div class="portfolio-overlay">
-                        <h3>Lógica & Python</h3>
-                        <span>Desarrollo de Software</span>
-                    </div>
-                </div>
-
-                <div class="portfolio-item" data-aos="fade-up" data-aos-delay="500" onclick="openModal('6.jpg', 'Identidad Gráfica Corporativa', 'Diseño vectorial aplicado a eventos y branding utilizando herramientas avanzadas como Adobe Illustrator.')">
-                    <img src="6.jpg" alt="Diseño Grafico">
-                    <div class="portfolio-overlay">
-                        <h3>Diseño Vectorial</h3>
-                        <span>Adobe Illustrator / Branding</span>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section class="contact" id="contact">
-            <h2 class="section-title" data-aos="fade-up">Conectemos</h2>
-            <div class="contact-container">
-                
-                <div class="contact-info" data-aos="fade-right">
-                    <div class="info-box">
-                        <i class="fas fa-envelope-open-text"></i>
-                        <div>
-                            <h3>Email</h3>
-                            <p>juanantonio.sanchezm@um.es</p>
-                        </div>
-                    </div>
-                    <div class="info-box">
-                        <i class="fas fa-phone-alt"></i>
-                        <div>
-                            <h3>Teléfono Directo</h3>
-                            <p>+34 633-698-035</p>
-                        </div>
-                    </div>
-                    <div class="info-box">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <div>
-                            <h3>Ubicación Base</h3>
-                            <p>Murcia, España, 30500</p>
-                        </div>
-                    </div>
-                </div>
-
-                <form class="contact-form" data-aos="fade-left" onsubmit="event.preventDefault(); alert('¡Mensaje enviado con éxito!');">
-                    <div class="input-group">
-                        <input type="text" placeholder="Nombre completo" required>
-                        <input type="email" placeholder="Email corporativo" required>
-                    </div>
-                    <input type="text" placeholder="Asunto (Ej: Auditoría SEO, Proyecto Data...)" style="width: 100%; margin-bottom: 2rem;" required>
-                    <textarea placeholder="Cuéntame sobre tu proyecto o necesidad de marketing analítico..." required></textarea>
-                    <button type="submit" class="btn"><i class="fas fa-paper-plane"></i> Enviar Mensaje</button>
-                </form>
-
-            </div>
-        </section>
-
-        <footer>
-            <p>&copy; 2026 <span>Juan Antonio Sánchez Marín</span> | Analítica, Diseño y Growth Marketing.</p>
-        </footer>
-
-    </main>
-
-    <!-- Modal (Lightbox) para Portfolio -->
-    <div id="portfolio-modal" class="modal">
-        <div class="modal-content">
-            <span class="close-modal" onclick="closeModal()">&times;</span>
-            <img id="modal-image" src="" alt="Vista Previa Proyecto">
-            <div class="modal-info">
-                <h3 id="modal-title">Título</h3>
-                <p id="modal-desc">Descripción detallada del impacto, herramientas analíticas o estratégicas empleadas.</p>
-            </div>
+    <!-- Skills -->
+    <h1 class="heading" style="margin-top: 5rem;"><span>Skills & Tecnologías</span></h1>
+    <div class="progress">
+        <div class="bar" data-aos="fade-up">
+            <h3><span>Python & Data</span> <span>75%</span></h3>
+            <span class="subtext">Pandas, NumPy, Matplotlib, Seaborn, Machine Learning Básico</span>
+        </div>
+        <div class="bar" data-aos="fade-up" data-aos-delay="100">
+            <h3><span>Desarrollo Web Front-End</span> <span>70%</span></h3>
+            <span class="subtext">HTML5, CSS3, JavaScript, Responsive Design, Animaciones</span>
+        </div>
+        <div class="bar" data-aos="fade-up" data-aos-delay="200">
+            <h3><span>Marketing Digital & SEO</span> <span>80%</span></h3>
+            <span class="subtext">Analítica Web, Estrategias SEO/SEM, Optimización, WordPress</span>
+        </div>
+        <div class="bar" data-aos="fade-up" data-aos-delay="300">
+            <h3><span>Bases de Datos & Backend</span> <span>60%</span></h3>
+            <span class="subtext">MySQL, PHP, SQLite, Django (básico)</span>
         </div>
     </div>
 
-    <!-- Scripts -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    <script>
-        // Inicializar AOS Animations
-        AOS.init({
-            duration: 800,
-            offset: 100,
-            once: true
-        });
+    <!-- Education & Experience -->
+    <div class="edu-exp">
+        <h1 class="heading" data-aos="fade-up" style="margin-top: 5rem;"> <span>Trayectoria</span> </h1>
+        <div class="row">
+            
+            <!-- Educación -->
+            <div class="box-container">
+                <h3 class="title" data-aos="fade-right"><i class="fas fa-graduation-cap"></i> Educación</h3>
+                
+                <div class="box epic-box" data-aos="fade-right">
+                    <span><strong>( 2025 - 2026 )</strong></span>
+                    <h3>MÁSTER EN MARKETING DIGITAL Y ANALÍTICO</h3>
+                    <p class="university-name">UNIVERSIDAD DE MURCIA</p>
+                    <p>Formación avanzada enfocada en estrategias de marketing digital, análisis profundo de datos, SEO, SEM, visualización de métricas y optimización de conversiones para liderar proyectos digitales.</p>
+                </div>
 
-        // Menú Responsive Toggle
-        const menuToggle = document.getElementById('menu-toggle');
-        const sidebar = document.getElementById('sidebar');
+                <div class="box epic-box" data-aos="fade-right">
+                    <span><strong>( 2021 - 2025 )</strong></span>
+                    <h3>GRADO EN GESTIÓN DE INFORMACIÓN Y CONTENIDOS DIGITALES</h3>
+                    <p class="university-name">UNIVERSIDAD DE MURCIA</p>
+                    <p>Diseño y gestión de sistemas de información, desarrollo de productos digitales, comunicación en redes y tratamiento de datos adaptados a la economía digital.</p>
+                </div>
+
+                <div class="box epic-box" data-aos="fade-right">
+                    <span><strong>( 2024 - 2025 )</strong></span>
+                    <h3>Especialización en Python & Django</h3>
+                    <p>Amd Formación / Udemy / SEF. Desarrollo de aplicaciones web completas, análisis de datos y fundamentos de programación.</p>
+                </div>
+            </div>
+            
+            <!-- Experiencia -->
+            <div class="box-container">
+                <h3 class="title" data-aos="fade-left"><i class="fas fa-briefcase"></i> Experiencia</h3>
+                
+                <div class="box epic-box" data-aos="fade-left">
+                    <span><strong>( 2024 - Actualidad )</strong></span>
+                    <h3>Front-End Developer y Community Manager</h3>
+                    <p>Creador y gestor web de <strong>novarum.es</strong> y <strong>curtioliva.es</strong>. Responsable del desarrollo front-end, SEO básico y gestión estratégica de redes sociales.</p>
+                </div>
+                
+                <div class="box epic-box" data-aos="fade-left">
+                    <span><strong>( 2025 - Actualidad )</strong></span>
+                    <h3>Gestor Web & Community Manager en CTCON</h3>
+                    <p>Mantenimiento y mejora de la web del Centro Tecnológico de la Construcción. Creación de contenidos, vigilancia tecnológica, SEO y análisis de datos.</p>
+                </div>
+
+                <div class="box epic-box" data-aos="fade-left">
+                    <span><strong>( 2014 - 2021 )</strong></span>
+                    <h3>Responsable de Logística (AMC)</h3>
+                    <p>Coordinación de recepción y distribución, gestión de inventarios y bases de datos internas asegurando la trazabilidad logística.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Services Section -->
+<section class="services" id="services">
+    <h1 class="heading" data-aos="fade-up"> <span>Mis Servicios</span> </h1>
+    
+    <div class="box-container">
+        <div class="box" data-aos="zoom-in">
+            <i class="fas fa-bullseye"></i>
+            <h3>Marketing Analítico</h3>
+            <p>Estrategias basadas en datos. Optimización de conversiones, análisis de métricas y crecimiento digital escalable.</p>
+        </div>
+        <div class="box" data-aos="zoom-in">
+            <i class="fab fa-wordpress"></i>
+            <h3>Desarrollo WordPress</h3>
+            <p>Creación de sitios web profesionales, rápidos y optimizados con CMS. (WooCommerce, Elementor, themes a medida).</p>
+        </div>
+        <div class="box" data-aos="zoom-in">
+            <i class="fas fa-code"></i>
+            <h3>Programación Python</h3>
+            <p>Automatización de procesos, análisis de datos con Pandas/NumPy y desarrollo de scripts a medida.</p>
+        </div>
+        <div class="box" data-aos="zoom-in">
+            <i class="fas fa-search"></i>
+            <h3>SEO & Posicionamiento</h3>
+            <p>Auditorías SEO, búsqueda de palabras clave y optimización On-Page para destacar en Google.</p>
+        </div>
+        <div class="box" data-aos="zoom-in">
+            <i class="fas fa-laptop-code"></i>
+            <h3>Desarrollo Front-End</h3>
+            <p>Diseño web moderno e interactivo utilizando HTML5, CSS3 y JavaScript con enfoque Responsive.</p>
+        </div>
+        <div class="box" data-aos="zoom-in">
+            <i class="fas fa-database"></i>
+            <h3>Gestor Documental</h3>
+            <p>Organización, estructuración y gestión de grandes volúmenes de información y bases de datos.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Portfolio Section -->
+<section class="portfolio" id="portfolio">
+    <h1 class="heading" data-aos="fade-up"> <span>Proyectos Épicos</span> </h1>
+    <p class="portfolio-desc" data-aos="fade-up">Selección de mis mejores trabajos en Desarrollo Web, Programación y Marketing.</p>
+
+    <!-- Subcategoría 1 -->
+    <h2 class="sub-heading" data-aos="fade-up">💻 Desarrollo Web & WordPress</h2>
+    <div class="box-container">
+        <!-- Ejemplo de Proyecto WP (Aquí puedes añadir tus enlaces de WP) -->
+        <div class="box" data-aos="zoom-in">
+            <a href="#" target="_blank">
+                <div class="img-overlay">
+                    <img src="https://images.unsplash.com/photo-1616469829581-73993eb86b02?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Proyecto WordPress">
+                    <div class="view-project">Ver Proyecto <i class="fas fa-external-link-alt"></i></div>
+                </div>
+            </a>
+            <h3>E-commerce en WordPress</h3>
+            <span>(2025) - Desarrollo & SEO</span>
+        </div>
+
+        <div class="box" data-aos="zoom-in">
+            <a href="https://www.curtioliva.es" target="_blank">
+                <div class="img-overlay">
+                    <img src="curtioliva.jpg.png" alt="Diseño web para Curti Oliva">
+                    <div class="view-project">Ver Proyecto <i class="fas fa-external-link-alt"></i></div>
+                </div>
+            </a>
+            <h3>Web Corporativa Curti Oliva</h3>
+            <span>(2024) - HTML, CSS & Edición</span>
+        </div>
+
+        <div class="box" data-aos="zoom-in">
+            <a href="https://ctcon-rm.com/es/" target="_blank">
+                <div class="img-overlay">
+                    <img src="ctcon..png" alt="CTCON">
+                    <div class="view-project">Ver Proyecto <i class="fas fa-external-link-alt"></i></div>
+                </div>
+            </a>
+            <h3>Gestión Web CTCON</h3>
+            <span>(2021 - Actualidad) - CMS & Community Management</span>
+        </div>
+    </div>
+
+    <!-- Subcategoría 2 -->
+    <h2 class="sub-heading" data-aos="fade-up" style="margin-top: 4rem;">🐍 Programación (Python & Datos)</h2>
+    <div class="box-container">
+        <div class="box" data-aos="zoom-in">
+            <a href="https://github.com/Funkillo/Titanic_Proyecto" target="_blank">
+                <div class="img-overlay">
+                    <img src="titanic_preview.png" alt="Proyecto Titanic">
+                    <div class="view-project">Ver Repositorio <i class="fab fa-github"></i></div>
+                </div>
+            </a>
+            <h3>Análisis de Datos: Titanic</h3>
+            <span>(2023 - 2024) - Python, Pandas, NumPy</span>
+        </div>
+
+        <div class="box" data-aos="zoom-in">
+            <a href="https://github.com/Funkillo/Juego_STUPIKDO" target="_blank">
+                <div class="img-overlay">
+                    <img src="intro.jpg" alt="Captura del juego Stupikdo">
+                    <div class="view-project">Ver Repositorio <i class="fab fa-github"></i></div>
+                </div>
+            </a>
+            <h3>Videojuego "STUPIKDO"</h3>
+            <span>(2021 - 2022) - Desarrollo en Python</span>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section class="contact" id="contact">
+    <h1 class="heading" data-aos="fade-up"> <span>Hablemos</span> </h1>
+
+    <div class="box-container">
+        <div class="box glow-box" data-aos="zoom-in">
+            <i class="fas fa-phone"></i>
+            <h3>Teléfono</h3>
+            <p>+34 633-698-035</p>
+        </div>
+        <div class="box glow-box" data-aos="zoom-in">
+            <i class="fas fa-envelope"></i>
+            <h3>Email</h3>
+            <p>juanantonio.sanchezm@um.es</p>
+        </div>
+        <div class="box glow-box" data-aos="zoom-in">
+            <i class="fas fa-map-marker-alt"></i>
+            <h3>Ubicación</h3>
+            <p>Murcia, España (30500)</p>
+        </div>
+    </div>
+</section>
+
+<div class="credit">
+    &copy; 2025 Juan Antonio Sánchez Marín. | Creado con <span>pasión y código</span>.
+</div>
+
+<!-- JS Scripts -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+    // Inicializar AOS (Animaciones)
+    AOS.init({
+        duration: 800,
+        delay: 100,
+        once: true // La animación solo se reproduce una vez al bajar
+    });
+
+    // Lógica del Botón "Like" (Empieza en 1435)
+    const likeBtn = document.getElementById('likebtn');
+    const likeCountSpan = document.getElementById('like-count');
+    let currentLikes = 1435;
+    
+    // Mostrar valor inicial
+    likeCountSpan.textContent = currentLikes;
+
+    likeBtn.addEventListener('click', () => {
+        currentLikes++;
+        likeCountSpan.textContent = currentLikes;
         
-        menuToggle.addEventListener('click', () => {
-            sidebar.classList.toggle('active');
-            menuToggle.classList.toggle('fa-times');
-            menuToggle.classList.toggle('fa-bars');
-        });
+        // Añadir una pequeña animación de pulso
+        likeBtn.style.transform = 'scale(1.15)';
+        likeBtn.style.color = '#fff';
+        setTimeout(() => {
+            likeBtn.style.transform = 'scale(1)';
+        }, 200);
+    });
 
-        // Activar link en menú al hacer scroll
-        const sections = document.querySelectorAll('section');
-        const navLinks = document.querySelectorAll('.nav-menu a');
+    // Lógica del menú móvil
+    const menuBtn = document.getElementById('menu-btn');
+    const header = document.querySelector('.header');
 
-        window.addEventListener('scroll', () => {
-            let current = '';
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop;
-                if (scrollY >= sectionTop - 200) {
-                    current = section.getAttribute('id');
-                }
-            });
+    menuBtn.addEventListener('click', () => {
+        menuBtn.classList.toggle('fa-times');
+        header.classList.toggle('active');
+    });
 
-            navLinks.forEach(link => {
-                link.classList.remove('active');
-                if (link.getAttribute('href') === `#${current}`) {
-                    link.classList.add('active');
-                }
-            });
-        });
-
-        // Botón Likes estático con pequeño efecto
-        const likeBtn = document.getElementById('likebtn');
-        likeBtn.addEventListener('click', () => {
-            likeBtn.style.transform = "scale(1.2)";
-            setTimeout(() => {
-                likeBtn.style.transform = "scale(1)";
-            }, 200);
-        });
-
-        // Lógica del Lightbox (Modal) OPACO
-        const modal = document.getElementById('portfolio-modal');
-        const modalImg = document.getElementById('modal-image');
-        const modalTitle = document.getElementById('modal-title');
-        const modalDesc = document.getElementById('modal-desc');
-
-        function openModal(imgSrc, title, desc) {
-            modalImg.src = imgSrc;
-            modalTitle.textContent = title;
-            modalDesc.textContent = desc;
-            modal.classList.add('show');
-            document.body.style.overflow = 'hidden'; // Evitar scroll de fondo
-        }
-
-        function closeModal() {
-            modal.classList.remove('show');
-            document.body.style.overflow = 'auto'; // Restaurar scroll
-            // Limpiar src por seguridad y visual
-            setTimeout(() => modalImg.src = "", 300);
-        }
-
-        // Cerrar modal al hacer clic fuera del contenido
-        window.addEventListener('click', (e) => {
-            if (e.target === modal) {
-                closeModal();
-            }
-        });
-    </script>
+    window.onscroll = () => {
+        menuBtn.classList.remove('fa-times');
+        header.classList.remove('active');
+    }
+</script>
 </body>
 </html>
